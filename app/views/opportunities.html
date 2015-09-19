@@ -1,0 +1,61 @@
+<div class="opportunities">
+	<div class="hero" bg-loader bgid="pageData.custom_fields.hero_image[0]">
+		<div class="sharethis">
+			<span class='st_facebook_custom'><img src="http://repertorio.nyc/images/social-fb.png" onmouseover="this.src='http://repertorio.nyc/images/social-fb-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-fb.png'" /></span>
+			<span class='st_twitter_custom'><img src="http://repertorio.nyc/images/social-tw.png" onmouseover="this.src='http://repertorio.nyc/images/social-tw-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-tw.png'" /></span>
+		</div>
+		<div class="vert-mid">
+			<h1>{{pageData.title}}</h1>
+		</div>
+	</div>
+	<div class="big-black-box">
+		<div class="col-md-12 txt-area">
+			<p>
+				{{pageData.custom_fields.opportunities_top_copy[0]}}
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-8 col-md-12 picture">
+			<div class="tablize">
+				<div class="carousel-fpo top"></div>
+			</div>			
+		</div>
+		<div class="col-lg-4 col-md-12">
+			<div class="announcements">
+				<div ng-bind-html="pageData.custom_fields.right_content_block_1[0]"></div>
+				<button ng-click="goToPage('nuestrasvoces-submit')">{{pageData.custom_fields.right_button_1[0]}}</button>
+				<button ng-click="goToPage('past-winners')">{{pageData.custom_fields.right_button_2[0]}}</button>
+				<a href="https://vimeo.com/ondemand/boxcar/27524625" target="_blank"><button class="black watch">{{pageData.custom_fields.right_button_3[0]}}</button></a>
+				<a href="http://www.amazon.com/Nuestras-Latino-Volume-Dreaming-Americas/dp/1300249528" target="_blank"><button class="black">{{pageData.custom_fields.right_button_4[0]}}</button></a>
+				<div ng-bind-html="pageData.custom_fields.right_content_block_2[0]"></div>
+			</div>
+		</div>
+	</div>
+		<div class="col-lg-4 col-md-12">
+			<div class="announcements">
+				<div ng-bind-html="pageData.custom_fields.left_content_block_1[0]"></div>
+
+				<button ng-click="goToPage('vanlier-apply')">{{pageData.custom_fields.left_button_1[0]}}</button>
+				<button ng-click="goToPage('view-alumni')">{{pageData.custom_fields.left_button_2[0]}}</button>
+				<img class="ny-trust" src="images/opportunities/ny-trust.jpg">
+				<div ng-bind-html="pageData.custom_fields.left_content_block_2[0]"></div>
+			</div>
+		</div>
+		<div class="col-lg-8 col-md-12 picture">
+			<div class="tablize">
+				<div class="carousel-fpo bottom"></div>
+			</div>	
+		</div>
+	</div>
+
+	<div class="big-gray-box">
+		<p ng-bind-html="pageData.custom_fields.audition_content[0]"></p>
+	</div>
+
+	<div class="big-black-box job-ops" style="text-align:center;padding:40px 0;">
+		<div ng-bind-html="pageData.custom_fields.job_opportunities_content[0]"></div>
+	</div>
+</div>
+<stay-intouch></stay-intouch>
+<footer-block></footer-block>

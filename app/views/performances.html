@@ -1,0 +1,124 @@
+<div class="performances  pp-scrollable">
+  <div class="col-sm-12 performances-hero">
+		<div class="sharethis">
+			<span class='st_facebook_custom'><img src="http://repertorio.nyc/images/social-fb.png" onmouseover="this.src='http://repertorio.nyc/images/social-fb-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-fb.png'" /></span>
+			<span class='st_twitter_custom'><img src="http://repertorio.nyc/images/social-tw.png" onmouseover="this.src='http://repertorio.nyc/images/social-tw-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-tw.png'" /></span>
+		</div>
+	<div class="announce vert-mid">
+      <h1>PERFORMANCES</h1>
+      <h2>AND TICKETS</h2>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="featured">
+        <div class="production wide holder">
+          <div class="production wide" style="background: url(/images/shows/a0SE00000006XJJMA2-featured.jpg) right center no-repeat">
+            <div class="plabel">
+              <h4>DOÑA FLOR Y SUS DOS MARIDOS</h4>
+              <hr>
+              <a href="#/event/a0SE00000006XJJMA2"><button>buy tickets</button></a>
+            </div>
+          </div>        
+        </div>
+
+        <div class="production wide holder">
+          <div class="production wide" style="background: url(/images/shows/a0SE000000GyHZMMA3-featured.jpg) right center no-repeat">
+            <div class="plabel">
+              <h4>EN LA USA ME QUEDÉ </h4>
+              <hr>
+              <a href="#/event/a0SE000000GyHZMMA3"><button>buy tickets</button></a>
+            </div>
+          </div>        
+        </div>
+
+        <div class="production wide holder">
+          <div class="production wide" style="background: url(/images/shows/a0SE000000Ia5CLMAZ-featured.jpg) right center no-repeat">
+            <div class="plabel">
+              <h4>HIERBA MALA NUNCA MUERE</h4>
+              <hr>
+              <a href="#/event/a0SE000000Ia5CLMAZ"><button>buy tickets</button></a>
+            </div>
+          </div>        
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div ng-controller="calendarController">
+        <jqx-calendar ng-model="date" jqx-settings="calendarSettings" id="jqxWidget" style="margin-top: 50px;"></jqx-calendar>
+      </div>
+
+      <div class="upcoming-shows">
+        <h3>UPCOMING PERFORMANCES</h3>
+        <ul>
+          <li ng-if="showDate.name!='COMBOTICKET SUBSCRIPTIONS' && showDate.name!='GIFT CERTIFICATES'" ng-repeat="showDate in showDates | orderBy: 'longDate' | limitTo: 7" ng-click="purchase(showDate.purchaseUrl)">
+            <div class="showname">{{showDate.name}}</div><div class="datename">{{showDate.shortDate}}</div>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="other-prod">
+    <div class="row">
+      <hr>
+      <div id="perform-grid-md">
+        
+          <div ng-repeat="event in events" ng-if="event.id!=='a0SE0000006vwXVMAY' && event.id!='a0SE00000007ItJMAU' && event.id!='a0SE000000Ia5CLMAZ' && event.id!='a0SE000000GyHZMMA3' && event.id!='a0SE00000006XJJMA2'" class="production" style="background: url('images/shows/{{event.id}}-sm.jpg')">
+            <div class="plabel">
+              <h4>{{event.name}}</h4>
+              <hr>
+              <a href="#/event/{{event.id}}"><button>buy tickets</button></a>
+            </div>
+          </div>
+
+          <div class="upcoming-panel">
+            <div class="content">
+              <h4>coming February 2016</h4>
+              <h2>UPCOMING PERFORMANCE</h2>
+              <h3>SEÑORITA 744890</h3>
+              <p align="center"><a href="#/signup">Sign up to get upcoming dates.</a></p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div id="info-box" class="big-dark-box infos row">
+    <div class="vert-mid">
+      <div class="info-box col-sm-12 col-md-6 red-icon combo-tickets">
+        <h3>COMBOTICKET SUBSCRIPTIONS</h3>
+        <div>For the true Repertorio fan, our Comboticket Subscriptions are just what you’ve been looking for. Discounted tickets, priority seating, and exclusive access to new productions are just some of the many perks included. 
+        </div>
+        <a href="#/combotickets"><button>learn more</button></a>
+      </div>
+
+      <div class="info-box col-sm-12 col-md-6 red-icon group-sales">
+        <h3>GROUP SALES</h3>
+        <div>The more, the merrier. Repertorio offers discounted rates to groups of 10 or more to many of our various productions. Choose your performance and contact us for availability and special pricing.
+        </div>
+        <a href="#/contact"><button>contact us</button></a>
+      </div>
+
+      <div class="info-box col-sm-12 col-md-6 red-icon gift-certificates">
+        <h3>GIFT CERTIFICATES</h3>
+        <div>Don’t know what to get your friend or family member for that special occasion? Give them the gift of theater! With various amounts to choose from, tickets to Repertorio make the perfect gift for a fabulous night of pure entertainment.  
+        </div>
+        <a href="https://repertorio.secure.force.com/ticket/#sections_a0FE000000A2xkVMAR" target="_blank"><button>buy now</button></a>
+      </div>
+
+      <div class="info-box col-sm-12 col-md-6 red-icon accessibilty">
+        <h3>ACCESSIBILITY</h3>
+        <div>Did you know Repertorio is wheelchair accessible, offers an audio amplification system for the hard of hearing, and offers visual captions in English and Spanish? Please contact us for pricing and seating if you request any of these accessibility options.
+        </div>
+        <a href="#/contact"><button>contact us</button></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<stay-intouch></stay-Intouch>
+<footer-block></footer-block>

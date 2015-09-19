@@ -1,0 +1,1099 @@
+/* === Media Queries / Responsive Styles === */
+@media screen and (max-width:1440px){
+	.other-prod .row {
+		max-height: 440px;
+	}
+	.other-prod .slick-prev,
+	.other-prod .slick-next {
+		margin-top:0;	
+	}
+	.home .big-red-box{
+		margin-top: 120px;
+	}
+	.performances .row .col-md-8 {width:60%!important;}
+	.performances .row .col-md-8, 
+	.performances .row .col-md-4 { padding:0px !important;}
+}
+@media screen and (max-width:1260px){
+	/*.announce h1 {font-size:3em;}
+	h2 {font-size:3em !important;}*/
+	.big-black-box.feeds .feed-box .panel .desc h2 {font-size: 18px!important;}
+	#perform-grid-md.home {
+		width:780px;
+	}
+	.home .big-red-box{
+		margin-top: 0;
+	}
+}
+@media screen and (max-width:1248px){
+	.navbar-brand > img {width:120px;}	
+}
+@media screen and (max-width:1187px){
+	.header-nav .navbar-nav {
+		margin: -50px 24px 0;
+	}
+}
+@media screen and (max-width:1145px) {
+	.big-dark-box.infos {
+		padding-top: 20px !important;
+		margin-top: 50px;
+	}
+	.production.winners .plabel span {float:left; font-size:11px; margin-right:auto;}
+}
+@media screen and (max-width:1100px) {
+	.big-red-box h3 { font-size: 30px;width:68%;}
+}
+@media screen and (max-width:1071px){
+	div.navigation {background:black;}
+	.navigation {
+		font-size: 13px !important;
+	}
+	.header-nav .navbar-nav {
+		margin: 0px 24px 0;
+	}
+	.navbar-nav.top-nav > li > a {text-align:center;}
+	.navbar-nav.top-nav > li > a.active {border-top:none !important;}
+	.navbar-nav.top-nav > li > a:hover {
+		border-top: none !important;
+		padding-top: 40px;
+	}
+	.navbar-nav .divider {display: none!important;}
+	.home .big-red-box{
+		margin-top: 120px;
+	}
+	.search {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media screen and (max-width:1024px){
+	.performances .row .col-md-8, .performances .row .col-md-4 {
+		width: 100%!important;
+		clear: both;
+	}
+	.performances .row .col-md-4 {padding-top: 30px!important;}
+	.performances .jqx-calendar, .event .jqx-calendar {
+		display: block;
+		margin: 0 auto;
+		clear: both;
+	}
+	.event .calendar h2 {
+		text-align: center;
+	}
+	.performances .upcoming-shows{
+		margin: 12px auto;
+	}
+	.gallery {clear:both;}
+}
+@media screen and (max-width:997px){
+	.upcoming-panel {background:url('/images/upcoming-panel-bg_sm.jpg') center top no-repeat; width:385px;}
+	.upcoming-panel .content {top:10px; width:90%;}
+	.upcoming-panel .content p {width:100%;}
+	.upcoming-panel .content h2 {font-size: 32px;margin-top: 30px;}
+}
+@media screen and (max-width:850px){
+	.navbar-brand > img {width:120px;}
+	#perform-grid-md.home {
+		width:385px;
+	}
+	.home .big-red-box{
+		margin-top: 0;
+	}
+	.announce p {
+		width: 60%;
+		font-size: 14px;
+	}
+	#pagepiling .view-cal {display:none;}
+}
+@media screen and (max-width:768px){
+	.combo-flex-tickets .fake-header-bg {height:200px;}
+}
+@media screen and (max-width:766px){
+	.performances #perform-grid-md,
+	.home #perform-grid-md {
+		width: 338px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:700px){
+	/*.announce h1 {
+		font-size: 1.8em;
+	}*/
+	.announce p {
+		width: 62%;
+	}
+	.other-prod {padding:0;}
+	.home .other-prod h2 { margin-top:32px; }
+	.event .events {margin:0 auto;width: 95%;}
+	.event .upcoming-show button {width: 100px;font-size: 12px;}
+	/*h2 {font-size: 1.8em !important;}*/
+}
+@media screen and (max-width:670px) {
+	.big-red-box h3 { font-size: 21px;width:90%;}
+	.big-white-box p {
+		width: 90%;
+		margin: 0 auto 20px;
+		font-size: 18px;
+	}
+}
+@media screen and (max-width:600px){
+	div.navigation {position:relative; z-index:1001;}
+	.hero .vert-mid h1, .announce h1 {
+		font-size: 35px!important;
+	}
+	.big-black-box .txt-area {
+		padding: 70px 18px;
+		width: 100%; }
+	.company .big-gray-box {padding:30px 50px!important;}
+}
+@media screen and (max-width:500px){
+	.announce h1 {width:70%;}
+	.opportunities .big-black-box .txt-area p {
+		width: 95%;
+	}
+	.education button.leftBtn {margin-right:0px!important; margin-bottom:15px;}
+	.education select {padding: 0 15px 0 25px!important;}
+	#jqxWidget[style],
+	#eventWidget[style],
+	#ViewjqxWidget[style],
+	#VieweventWidget{max-width:460px;width:100%!important;}
+	#calendarTitleHeaderViewjqxWidget > div[style],
+	#calendarTitleHeaderVieweventWidget > div[style]{width:100%!important;}
+}
+
+@media screen and (max-width:400px){
+	.education .big-red-box {
+		padding: 60px 20px 30px !important;
+	}
+	.education .big-gray-box h3 {font-size: 32px;}
+	.sub-hero {
+		padding: 2% 4% 4%;
+		width:95%
+	}
+	.upcoming-show .plabel p {font-size:11px;}
+	.announce.content > p  {width:90%}
+	.announce.content .winner-right {right:auto; left:50%; margin:10px auto 0 -150px!important; width:300px!important;}
+	.text-justify { text-align: left;}
+	.company .gil-zal, .company .ren-buc {
+		min-height: 270px!important;
+	}
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header {
+    margin-bottom: -1;
+  }
+  .jumbotron {
+    border-bottom: 0;
+  }
+  .opportunities .big-black-box .txt-area p {
+		display: block;
+		width: 80%;
+		margin: 0 auto !important;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+  .faq-items.fist-column {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+  .faq-items.second-column {
+    padding-top: 0;
+  }
+
+
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width : 768px) {
+  .faq-items.fist-column {
+    padding-bottom: 0;
+  }
+  .faq-items.second-column {
+    padding-top: 0;
+  }
+  .header-nav {
+    /*height: 557px;
+    position: relative;*/
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 1);
+  }  
+  .event .event-hero {width:100%;}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+  .faq-items.fist-column {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+  .faq-items.second-column {
+    padding-top: 0;
+  }
+  .header-nav {
+    /*height: 557px;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 1);*/
+  }
+  .navbar-nav.top-nav > li > a.active, .navbar-nav.top-nav > li > a:hover {
+    border:none!important;
+	padding-top:40px;
+  }
+  .home .content {
+    top: 20%!important;
+  }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+  .faq-items.fist-column {
+    padding-bottom: 0;
+  }
+  .faq-items.second-column {
+    padding-top: 0;
+  }
+  .big-white-box {
+    padding: 0;
+  }
+  .header-nav {
+    height: 557px;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 1);
+  }
+  .home .content {top:20%!important;}
+  .announce h1 {
+    font-size: 2.48rem; 
+    width: 90%;
+  }
+  /*div.col-sm-12.home-hero.aspectwrapper div.announce.content h1 {
+    margin-top: 140px !important;
+  }*/
+  .announce {
+    vertical-align: middle;
+  }
+  div.container-full {
+    min-width: 100%;
+  }
+  #perform-grid-md.home {
+    width: 320px;
+  }
+  .header-nav {
+    height: 100px; /* auto; */
+  }
+  .production, 
+  .production .plabel {
+    width: 377px !important;
+  }
+  div#perform-grid-md.home.flush-right {
+    width: 320px !important;
+  }
+  slick.responsive.ng-scope.ng-isolate-scope.slick-initialized.slick-slider {
+    width: 1560px !important;
+  }
+  div.slick-list.draggable {
+    width: 1560px !important;
+  }
+  div.production.ng-scope.slick-slide.slick-cloned {
+    width: 377px !important; 
+    max-width: 100% !important;
+  }
+  .production .plabel h4 {
+    width: 300px !important;
+    padding-left: 40px !important;
+  }
+  /*.slick-slider {
+    height: 225px; 
+  }*/
+  .announce p {
+    /*visibility: hidden;*/
+    text-align: justify;
+    height: 120px;
+    width: 92%;
+  }
+  .announce button {
+    margin: 0 auto 0 12%;
+  }
+  div.announce.content button {
+    position: fixed;
+    bottom: 45px;
+  }
+  .box h3 {
+    width: 100%;
+    font-size: 2.5em;
+  }
+  .big-white-box h3 {
+    width: 100%;
+  }
+  .nav-collapse.opened {
+    width:320px;
+  }
+  .navbar-nav.top-nav > li > a {
+    padding-top: 10px;
+  }
+  div#pp-arrow.ng-scope {
+    clear: both;
+    height: 42px;
+  }
+  div.home.ng-scope div.section.pp-scrollable.pp-section.active div.other-prod div.row {
+  	margin-bottom: 40px;
+  	margin-top: -40px;
+  }
+  div#perform-grid-md.home.flush-right button#view-all {
+  	/*margin-top: 120px;*/
+  }
+  slick.responsive.ng-scope.ng-isolate-scope.slick-initialized.slick-slider {
+    width: 1560px !important;
+    margin-bottom: 40px !important;
+  }
+  div.header-nav.ng-scope {
+    position: fixed;
+  }
+  div.col-sm-12.home-hero.aspectwrapper {
+    /*height: 480px;*/
+    height: 100.6% !important;
+  }
+
+}
+/* landscape menu - mobile */
+@media only screen and (max-width: 480px) and (orientation: landscape) {
+  .nav-collapse.opened {
+    width:480px;
+  }
+  .navbar-nav.top-nav > li > a {
+    padding-top: 10px;
+  }
+  .header-nav {
+    height: auto !important;
+  }
+  .announce p {
+    width: 90% !important;
+    text-align: justify !important;
+    margin: 0px !important;
+  }
+  .announce h1 {
+    width: 100% !important;
+  }
+  .announce button {
+    margin-top: 5px !important;
+  }
+  .nav-collapse.opened {
+    width:480px;
+  }
+  .navbar-nav.top-nav > li > a {
+      padding-top: 5px;
+  }
+  .nav-collapse.nav-collapse-0.opened {
+    top: -30px !important;
+  }
+  .header-nav .navbar-nav {
+    margin: 0 !important;
+  }
+}
+
+@media(min-width:767px){
+  #perform-grid-md {
+      width: 338px;
+      margin: 0 auto;
+  }
+
+  .panel-default {
+    padding-top: 9%;
+  }
+  /*body > div > div.container > div > div.opportunities.ng-scope > div.hero > div > h1 {
+    font-size: 3.9em;
+  }*/
+  .education.box,
+  .touring.box {
+    border-left: none !important; 
+    border-right: none !important; 
+    border-bottom:4px solid #fff !important; 
+    border-top:4px solid #fff !important; 
+
+  }
+  .big-white-box {
+    padding: 60px 100px;
+  }
+
+}
+@media(max-width:767px){
+ 	.past-winners .big-gray-box img{
+		width:auto;
+		max-width:100%;
+ 	}
+	.winner-right img {
+	  height: auto;
+	  width: auto;
+	  max-width: 100%;
+  	}
+	.big-gray-box p{
+		width:85%;
+	}
+
+    .past-winners .production .plabel button{
+  	  width:176px;
+    }
+	.past-winners .big-gray-box{
+		padding:0;
+	}
+  body > div > div.container > div > div.opportunities.ng-scope > div.col-lg-8.col-md-12.picture > div,
+  body > div > div.container > div > div.opportunities.ng-scope > div.row > div.col-lg-8.col-md-12.picture > div
+  {
+    height: 402px !important;
+  }
+  /*body > div > div.container > div > div.opportunities.ng-scope > div.hero > div > h1 {
+    font-size: 3.9em;
+  }*/
+  .education.box,
+  .touring.box {
+    border-left: none !important; 
+    border-right: none !important; 
+    border-bottom:4px solid #fff !important; 
+    border-top:4px solid #fff !important; 
+  }
+  .box h3 {
+    font-size: 3em;
+  }
+  .big-white-box {
+    padding: 60px;
+  }
+  .slick-slider.slick-vertical, .slick-slider.slick-vertical .slick-list {
+	margin: 39px auto 60px;
+  }
+  .home .content {top:10%;}
+  .home .announce.content {top: 30%;}
+  .announce.content .winner-right {right:auto; left:50%; margin:10px auto 0 -188px;}
+  .big-black-box.feeds .feed-box {display:block;}
+}
+@media(max-width:998px){
+    .past-winners #perform-grid-md{
+  	  width:auto;
+    }
+    .past-winners.alumni.tours #perform-grid-md{
+    	width:auto;
+    }
+    .past-winners .production .plabel button{
+  	  width:176px;
+    }
+    .plabel h5{
+  	  font-size:19px;
+    }
+    .other-prod .production.winners{
+  	  width:383px!important;
+    }
+    .past-winners .other-prod .production.winners span{
+  	  margin-right: 184px;
+	  font-size:12px;
+  	
+    }
+	.past-winners .production .plabel h4{
+		font-size:22px;
+		margin-left:5px;
+	}
+
+}
+@media(max-width:479px){
+    .other-prod .production {/*float:none;*/ height:284px!important;margin:0 auto 15px 5%; width:300px!important;}
+	.other-prod .production.slick-slide {height:362px!important; margin:auto 7px 7px auto; width:383px!important;}
+	.other-prod .production .plabel {width:300px}
+	.other-prod .production .plabel h4 {font-size:18px;}
+	.other-prod .production.winners{
+  	  width:100%!important;
+    }
+	.past-winners .other-prod .production.winners span{
+		margin-left:10px;
+		margin-top:-5px;
+	}
+	.winner-right{
+		right:0;
+		width:100%;
+	}
+	.production.winners .plabel{
+		width:auto!important;
+	}
+	.past-winners .production .plabel h4{
+		font-size:18px;
+		padding-left:10px!important;
+	}
+	.plabel h5{
+		font-size:16px;
+	}
+	.big-white-box h3 {width:auto;}
+	.performances .row .col-md-8 {width:100%!important;}
+	.upcoming-panel {width:300px; margin: 0 auto 15px 5%; height: 275px;}
+}
+@media screen and (min-width:500px){
+	.company .gil-zal,
+	.company .ren-buc {
+		width: 100%;
+		max-width: 400px;
+		min-height: 400px!important;
+	}
+}
+@media screen and (min-width:992px){
+	.quote {margin-top:20%;}
+}
+@media(min-width:998px){
+  #perform-grid-md {
+    width: 788px;
+  }
+  .past-winners.alumni #perform-grid-md{
+	  width: 849px;
+  }
+  .other-prod {
+    padding: 0 0 0;
+  }
+  .panel-default {
+    padding-top: 9%;
+  }
+  body > div > div.container > div > div.opportunities.ng-scope > div.col-lg-8.col-md-12.picture > div,
+  body > div > div.container > div > div.opportunities.ng-scope > div.row > div.col-lg-8.col-md-12.picture > div
+  {
+    height: 1042px !important;
+  }
+  .education.box {
+    border-right: 2px solid #fff !important; 
+    border-bottom: none !important; 
+    border-top: none !important;
+  }
+  .touring.box {
+    border-left: 2px solid #fff !important; 
+    border-bottom: none !important; 
+    border-top: none !important; 
+  }
+  /*.big-white-box {
+    padding: 60px;
+  }*/
+  .upcoming-panel {background:url('/images/upcoming-panel-bg.png') center top no-repeat;}
+}
+@media (max-width:1145px){
+    .past-winners .other-prod .production.winners span{
+  	  margin-right: 184px;
+    font-size:12px;
+	
+    }
+    .past-winners .production .plabel button{
+   	  width:176px;
+     }
+}
+@media(min-width:1146px){
+  #perform-grid-md,
+  .tours .other-prod .row #perform-grid-md.centered  {
+    width: 1190px;
+  }
+  .other-prod .row #perform-grid-md.centered {width:900px}
+
+  .panel-default {
+    padding-top: 9%;
+  }
+  body > div > div.container > div > div.opportunities.ng-scope > div.col-lg-8.col-md-12.picture > div,
+  body > div > div.container > div > div.opportunities.ng-scope > div.row > div.col-lg-8.col-md-12.picture > div
+  {
+    height: 1042px !important;
+  }
+  .education.box {
+    border-right: 2px solid #fff !important; 
+    border-bottom: none !important; 
+    border-top: none !important;
+  }
+  .touring.box {
+    border-left: 2px solid #fff !important; 
+    border-bottom: none !important; 
+    border-top: none !important;
+  }
+  /*.big-white-box {
+    padding: 60px;
+  }*/
+}
+@media screen and (min-width:1200px){
+	.col-name-1 {float: left;width:20%;}
+}
+@media screen and (min-width:1260px){
+	.company .member-portrait {min-height:305px;}
+}
+@media(min-width:1576px){
+  #perform-grid-md {
+    width: 1560px;
+  }
+  .panel-default {
+    padding-top: 14%;
+  }
+  body > div > div.container > div > div.opportunities.ng-scope > div.col-lg-8.col-md-12.picture > div,
+  body > div > div.container > div > div.opportunities.ng-scope > div.row > div.col-lg-8.col-md-12.picture > div
+  {
+    height: 1042px !important;
+  }
+  .education.box {
+    border-right: 2px solid #fff !important; 
+    border-bottom: none !important; 
+    border-top: none !important;
+  }
+  .touring.box {
+    border-left: 2px solid #fff !important; 
+    border-bottom: none !important; 
+    border-top: none !important;
+  }
+  /*.big-white-box {
+    padding: 60px;
+	}*/
+  .other-prod .production.winners{
+  	background-size:cover !important;
+  }
+}
+/* ***STYLES TO BE MOVED TO MAIN.CSS***
+* Styles added to the main.scss/css files are being overwritten even though the changes are committed to the repo
+* Temporarily holding key css changes here until the dev team can be streamlined.
+*/
+a:focus {outline:none;}
+a::-moz-focus-inner {border:0;}
+.st_facebook_custom,
+.st_twitter_custom {cursor:pointer;}
+.st_facebook_custom > img, .st_twitter_custom > img {
+    width: 18px;
+    height: 18px;
+}
+#pp-arrow {
+	bottom: 20px;
+	left:50%!important;
+	width:52px;
+}
+#pp-arrow img {width:42px;}
+.view-cal{
+	position: absolute;
+	bottom: 130px!important;
+	right: 50px;
+	top:auto;
+}
+.view-cal button {
+	color:#fff;
+	background: #870808;
+}
+.view-cal button:hover {
+    background: #333!important;
+    color: #fff;
+    transition: all 0.25s ease-in;
+}
+.big-black-box.feeds .feed-box .panel .desc {padding-top: 25px;vertical-align:top;}
+.big-black-box.feeds .feed-box .panel .desc h2 {color:#ccc; font-size:16px; font-weight:normal;}
+.big-black-box.feeds .feed-box .panel .desc h3 {line-height:22px;}
+
+button {font-size: 14px;}
+.contact iframe {margin-top:0!important;}
+.transportation {
+	max-width:240px;
+	width:100%;
+}
+.hero {position:relative;}
+.showname:hover ~ .datename, .showname:hover {
+  color: red;
+  text-decoration: underline;
+  transition: linear 0.33s;
+}
+.company .big-gray-box {padding:30px 50px;}
+.company .big-gray-box.portraits {padding:30px 100px;}
+.company .big-gray-box .col-sm-3,
+.company .big-white-box .col-sm-3 {
+   width: 24% !important;
+}
+.company .member-portrait {
+  min-width:200px!important;
+}
+.big-black-box.job-ops {
+  background: url('/images/opportunities/job-op-bg.jpg') center center/cover no-repeat !important;
+}
+
+body,
+.announce p,
+.big-gray-box p,
+.big-white-box p,
+.box p,
+.event .big-dark-box .event-detail p {font-size:16px!important;}
+
+.doc-page p {
+    text-align: left;
+    margin: 0 0 12px;
+}
+
+.navigation-bar .container {
+    padding: 0 5%;
+}
+.navigation {font-size: 12px;}
+
+.hero .vert-mid h1,
+.announce h1 {font-size:50px;}
+
+.home .other-prod h2,
+.hero .vert-mid h2,
+.performances .announce h2,
+.big-black-box.feeds .social-feed h1,
+.big-black-box h3,
+.box h3,
+.faq h3 {font-size: 40px;}
+
+.faq > h3 {text-align:center;}
+.faq .faq-items h3 {margin-top:40px;}
+
+.big-gray-box h3 {font-weight:600;}
+
+h3.doc-page-title {
+    padding: 0 0 20px;
+    width: 97%;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.winners .plabel h5 {
+	font-size: 19px;
+    font-weight: normal;
+}
+.opportunities .announcements h6 {font-weight:bold;margin-bottom:5px;text-transform:uppercase;}
+
+.other-prod .production.winners span {font-size:13px}
+
+.donate .icon h4 {padding-bottom: 0px!important;}
+.donate .icon p {width: 80%;}
+
+.home .big-gray-box.sponsors{margin-top:35px;}
+
+.quote {font-size:22px;}
+
+.flush-right button#view-all {width: 225px;}
+
+.link a,
+.desc a {text-transform:uppercase;}
+
+.upcoming-panel .content h4 {font-size: 14px!important;}
+.upcoming-panel .content p {text-align: center;}
+
+.repertorio-espanol .history .txt-area {padding: 10px 70px 35px;}
+.repertorio-espanol .big-gray-box p {width: 100%!important;}
+.repertorio-espanol .big-gray-box p.left,
+.repertorio-espanol .big-gray-box p.right {padding:0 10% 20px!important;}
+
+.production.wide .plabel h4 {font-size:33px;}
+.upcoming-shows ul li .datename {width:32%!important;}
+
+.company .member-portrait .member-details,
+.production .plabel {background: rgba(38, 38, 38, 0.6);}
+.col-name-1 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-names{
+  float: none;
+  margin: 0 auto;
+}
+
+.announce.content > h1,
+.announce.content > h3 {margin-top:0!important;}
+.announce.content > p {font-size: 14px!important;margin:0!important; text-transform:uppercase;}
+.announce.content .winner-right {bottom:auto; max-width:545px; right:5%}
+.announce.content .winner-right p {font-size: 13px!important;line-height:21px;width:100%;}
+
+.company .col-names {
+  display: inline-block;
+  float: none;
+  text-align: center;
+  margin-right: 4px;
+}
+.company .member-name-row .col-names {
+  margin: 24px auto;
+}
+.info-box {padding: 0 4% !important;height: 278px;}
+.big-dark-box.infos {
+    height: auto !important;
+    padding-top: 98px !important;
+}
+.performances #info-box.big-dark-box.infos {margin-top:20px}
+.events div.upcoming-show:last-of-type {margin-bottom:45px;}
+.faq {background: #f8f8f8; padding-top: 30px;}
+.faq .faq-items {padding:0 50px 50px;}
+.faq h3.prepare-visit {margin: 50px 50px 0!important; border-bottom: none!important;background:none!important;}
+
+.past-winners .other-prod > h3 {margin-top:0;}
+
+.nuestrasvoces-submit .header-image {min-width:300px!important;}
+
+.opportunities .announcements h2 {border-bottom: 1px solid #000;padding-bottom: 12px;}
+.opportunities .ny-trust{max-width: 170px;}
+.opportunities .mlf{max-width: 220px;}
+
+.plabel.taller {
+    height: 160px;
+}
+.plabel.taller h5 {
+    top: 65px;
+}
+.plabel.taller hr {
+    margin-top: 114px;
+}
+
+button.black:hover {
+    background: white!important;
+    color: black!important;
+}
+button.download:hover {
+    background: black!important;
+    color: white!important;
+}
+
+.submit-form-yellow textarea, .submit-form-yellow input[type="text"], .submit-form-yellow input[type="file"], .submit-form-yellow select {
+	border-radius:0px!important;
+	border: 2px solid #f5c217;
+	margin-right: 2%;
+	min-width: 45%;
+	min-height: 40px;
+}
+.submit-form-yellow input[type="file"] {
+    text-transform: uppercase;
+	font-size: 14px;
+}
+.submit-form-yellow label.acknowledgement {
+    font-size: 15px;
+    font-weight: lighter;
+}
+.submit-form-yellow input[type="checkbox"] {
+    outline: 2px solid #f5c217 !important;
+}
+form.submit-form-yellow ::-webkit-input-placeholder {
+   color: black;
+}
+
+form.submit-form-yellow :-moz-placeholder { /* Firefox 18- */
+   color: black; 
+}
+
+form.submit-form-yellow ::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+form.submit-form-yellow :-ms-input-placeholder {  
+   color: black;  
+}
+
+/*==========  Education - Sponsors fc ==========*/
+.education .big-black-box .txt-area h3 {margin-top:5px}
+.education .big-black-box .txt-area h4 {margin-top:30px}
+
+.education .big-gray-box {padding: 40px 0 65px;}
+.education .big-gray-box.group-sales {background: url('/images/education/bkg-group-sales.png') no-repeat center center;}
+.education .touring-to-schools {background: url('/images/education/bkg-tours-to-schools.png') no-repeat center center;}
+.education .study-guides {background: url('/images/education/bkg-study-guides.png') no-repeat center center;}
+.education .big-red-box {
+    padding: 60px 60px 30px !important;
+}
+.education .big-red-box .left-side {
+    padding-right: 10px!important;
+}
+.education .big-red-box .left-side button {
+    margin: 20px 0 0 0;
+}
+.education .big-white-box {
+    padding: 60px 0px!important;
+    text-align: center;
+}
+.education button.leftBtn {margin-right:30px;}
+.sponsors img {
+   max-height: 60px !important;
+   max-width: 200px !important;
+   height: 45px !important;
+   padding: 2px !important;
+}
+/*==========  Education - Sponsors  fc ==========*/
+
+/*==========  Tours - Sponsors fc ==========*/
+.sponsors.sponsors-tours img {
+   max-height: 90px !important;
+   max-width: 250px !important;
+   height: 60px !important;
+   padding: 5px 20px!important;
+}
+/*==========  Tours - Sponsors  fc ==========*/
+
+.upcoming-shows h3 {font-size: 22px;}
+.upcoming-shows ul li {margin-top:5px;}
+
+/*==========  93 and 135- Adjustments  fc ==========*/
+td[role="gridcell"].jqx-fill-state-pressed:hover,
+.jqx-fill-state-pressed:hover, 
+.jqx-calendar-cell-specialDate:hover  {
+   background-color: #870808 !important;
+   border-color: #870808 !important;
+  }
+.jqx-calendar-cell-today:hover, .jqx-calendar-cell-specialDate:hover {
+    color: #ffffff !important;
+  }
+  .jqx-tooltip a {
+    color: #ffffff !important;
+  }
+  
+  li.ng-scope:hover, li.ng-scope:hover div, .showname:hover {
+    color: #870808 !important;
+    
+    text-decoration: none !important;
+  }
+  li.ng-scope:hover {
+    border-bottom: 1px solid #870808 !important;
+  }
+  /*==========  93 and 135- Adjust the colors (hover states)  fc ==========*/
+
+  /*==========  254- Adjustments  fc ==========*/
+  
+  h3.combo-header.combo-title.comboticket-header-title {
+    text-align: left !important;
+      margin: 0 !important;
+  font-size: 30px !important;
+  }
+  .combo-flex-tickets .big-white-box h3 {
+    text-align: left !important;
+      margin: 0 !important;
+    font-size: 30px !important;
+  }
+  a div.col-md-5.flex-pack-promo.combo-a, a div.col-md-5.flex-pack-promo.combo-b {
+    background-repeat: no-repeat;
+    height: 370px !important;
+    /* width: 50% !important;
+    margin-left: 0;
+    margin-right: 0;
+*/
+    margin-bottom: 35px;
+    
+    }
+  a div.col-md-5.flex-pack-promo.combo-a { 
+    max-width: 652px !important;
+      min-width: 49% !important;
+      width: 50% !important%;
+  }
+  a div.col-md-5.flex-pack-promo.combo-b { 
+    max-width: 652px !important;
+      min-width: 50% !important;
+      /*width: 50% !important;*/
+      margin-right: 0px !important;
+  }
+  a div.col-md-5.flex-pack-promo.combo-a div, a div.col-md-5.flex-pack-promo.combo-b div {
+    vertical-align: middle !important;
+    height: 270px;
+    padding: 10% 0; 
+  }
+  /*==========  254- Adjustments  fc ==========*/
+
+  /*==========  258- Adjustments  fc ==========*/
+  div.big-white-box ol li {
+    font-weight: 300;
+  }
+  /*==========  258- Adjustments  fc ==========*/
+
+  /*==========  259- Adjustments  fc ==========*/
+  h4.combo-header {
+    text-align: left;
+  }
+  p.combo-redeem {
+    font-weight: 300;
+    text-align: left !important;
+    padding: 0;
+    margin: 0 !important;
+    width: 100%;
+  }
+  p.combo-redeem a {
+    color: #000000;
+    font-weight: bold;
+  }
+  /*==========  259- Adjustments  fc ==========*/
+
+  /*==========  260- Adjustments  fc ==========*/
+  div.big-white-box button {
+    margin: 32px 0 16px;
+  }
+  div.big-white-box ol {
+    padding-left: 25px !important;
+    margin-bottom: 30px !important;
+    font-size: .9375em;
+  }
+  div.big-white-box p.combo-redeem {
+    font-size: .9375em;
+  }
+  .flex-pack-promo p {width: 75%;}
+  .flex-pack-promo button {margin: 16px 0!important;}
+  /*==========  260- Adjustments  fc ==========*/
+
+
+  /*==========  289- Adjustments  fc ==========*/
+  .education .big-red-box .full-height {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  /* Option No. 2 -- fills screens increasing Width of two columns
+  .education .big-red-box {
+    padding: 0 !important;
+  }
+   */
+  /*==========  289- Adjustments  fc ==========*/
+
+  /*==========  298- Adjustments  fc ==========*/
+  div.big-gray-box.group-sales a {
+    color: black !important;
+    font-weight: bold;
+  }
+  div.big-gray-box.group-sales a:hover {
+    color: #f4c317 !important;
+    text-decoration: none !important;
+  }
+  /*==========  298- Adjustments  fc ==========*/
+
+  /*==========  345- Adjustments  fc ==========*/
+  div.big-black-box p.col-md-6.txt-area:nth-child(2) {
+    max-width: 480px !important;
+  }
+  div.big-black-box.theater p.col-md-6.txt-area:nth-child(2) {
+    max-width: 50% !important;
+  }
+  div.big-black-box p.col-md-6.txt-area:nth-child(2) a {
+    color: #ffffff !important;
+  }
+  div.big-black-box p.col-md-6.txt-area:nth-child(2) a:nth-child(1) {
+    text-decoration:none !important;
+  }
+  /*==========  345- Adjustments  fc ==========*/
+
+  /*==========  351- Adjustments  fc ==========*/
+    div.tours.row.pp-scrollable div.other-prod h2 {
+      /* margin-bottom: 39px; */
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+  /*==========  351- Adjustments  fc ==========*/
+
+    /*==========  8-25-15 Changes  fc ==========*/
+    /* Increase font size for paragraph on main, top images */
+    div.announce.content p {
+      font-size: 18px !important;
+    }
+    /* Move Main, Top Image's button down 40px */
+    div.announce.content button {
+      margin-top: 40px !important;
+    }
+    /* Increase font size for education, touring, and donate paragraphs */
+    div.row div.col-md-6.box div.vert-mid p, .box p, .big-white-box p  {
+     font-size: 18px !important; 
+    }
+  /*==========  8-25-15 Changes fc==========*/
+
+  

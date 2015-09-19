@@ -1,0 +1,88 @@
+.repertorio-espanol .big-gray-box.history button {
+	margin-bottom: 60px;
+}
+
+.repertorio-espanol .big-black-box .txt-area p {
+	width: 80%;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.repertorio-espanol .big-gray-box p {
+	width: 50%;
+}
+
+.repertorio-espanol .big-gray-box button {
+	margin: 0 auto;
+	display: table;
+	width: auto;
+	padding: 0 25px;
+}
+
+.repertorio-espanol .clearfix {
+	clear: both;
+}
+
+.repertorio-espanol .big-gray-box p.left{
+	padding-right: 30px;
+}
+
+.repertorio-espanol .big-gray-box p.right{
+	padding-left: 30px;	
+}
+
+/*ANNUAL REPORTS SECTION*/
+
+.repertorio-espanol .big-black-box.annual-reports .txt-area p {
+	max-width: 500px;
+}
+
+.repertorio-espanol .big-black-box.annual-reports h3{
+	text-align: center;
+}
+
+.repertorio-espanol .big-black-box.annual-reports .buttons{
+	margin: 25px auto;
+	display: table;
+}
+
+.repertorio-espanol .big-black-box.annual-reports select,
+.education select{
+	background-color: #e3b104;
+	padding: 0 150px 0 25px;
+	margin-right: 16px;
+	border: 0px;
+	color: black;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  	-webkit-border-radius: 0px;
+  	cursor: pointer;
+	background-image: url(../images/repertorio-espanol/dropdown-arrow.png);
+	background-repeat: no-repeat;
+	background-position: right 15px center;
+	font-size: 14px;
+	font-weight: 600;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 0;
+	height: 42px;
+	text-overflow: ellipsis;
+}
+
+.repertorio-espanol .big-black-box.annual-reports select::-ms-expand {
+    display: none;
+}
+
+.repertorio-espanol .big-black-box.annual-reports button:last-child{
+	background-color: white;
+	color: black;
+	width: auto;
+	padding: 0 25px;
+	font-size: 14px;
+}
+
+/*SPONSORS*/
+.repertorio-espanol .sponsors img:not(:last-child){
+	margin-right: 70px;
+}

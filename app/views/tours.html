@@ -1,0 +1,76 @@
+<div class="tours row  pp-scrollable">
+	<div class="hero" bgid="pageData.custom_fields.hero_image[0]" bg-loader>
+		<div class="sharethis">
+			<span class='st_facebook_custom'><img src="http://repertorio.nyc/images/social-fb.png" onmouseover="this.src='http://repertorio.nyc/images/social-fb-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-fb.png'" /></span>
+			<span class='st_twitter_custom'><img src="http://repertorio.nyc/images/social-tw.png" onmouseover="this.src='http://repertorio.nyc/images/social-tw-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-tw.png'" /></span>
+		</div>
+		<div class="vert-mid">
+			<h1>
+				{{pageData.title}}
+			</h1>
+		</div>
+	</div>
+
+	<div class="big-black-box">
+		<p class="col-md-6 txt-area" ng-bind-html="pageData.custom_fields.tours_left_column[0]">
+			<!-- Repertorio offers a variety of productions available for touring across New York City and beyond. Our production list includes classic and contemporary pieces as well as musicals and theater for children. Some of our most popular and requested touring productions are “La gringa,” “En el tiempo de las mariposas,” Bésame mucho,” “El Quijote,” and “La casa de Bernarda Alba.” --> 
+		</p>
+		<p class="col-md-6 txt-area" ng-bind-html="pageData.custom_fields.tours_right_column[0]">
+			<!-- BOOK A TOUR BY CALLING OR EMAILING US<br> 
+			<a href="tel:+12122259999">212.225.9999</a> or <a href="mailto:tours@repetorio.org">tours@repetorio.org</a> -->
+		</p>
+	</div>
+
+	<div class="sub-hero">
+		<div class="vert-mid" ng-bind-html="pageData.custom_fields.upcoming_tours_content[0]">
+			<!-- <h2>upcoming tours</h2>
+			<p>
+				<h3>September 25-26, 2015</h3>
+				"La zapatera prodigiosa" by Federico García Lorca
+				International Theatre Festival - Cuenca, Ecuador
+				Made possible by Theatre Communications Group, The Andrew W. Mellon Foundation, and Robert Sterling Clark Foundation
+
+				<h3>October 16, 2015</h3>
+				"Bésame Mucho: Latinas Sing Latinas" by Pablo Zinger
+				Guaracini Performing Arts Center at Cumberland County College - Vineland, NJ
+
+				<h3>November 12, 2015</h3>
+				"El Quijote" by Miguel de Cervantes
+				Roschel Performing Arts Center at Franklin Marshall College - Lancaster, PA
+			</p> -->
+		</div>
+
+	</div>
+
+	<div class="other-prod">
+	    <h2>Available  for  Touring</h2>
+	    <div class="row">
+	      <div id="perform-grid-md" class="centered">
+	        <div ng-repeat="event in events" ng-if="event.id!='a0SE0000006vwXVMAY' && event.id!='a0SE00000007ItJMAU'" class="production" style="background: url('images/shows/{{event.id}}-sm.jpg')">
+	          <div class="plabel">
+	            <h4>{{event.name}}</h4>
+	            <hr>
+	            <button ng-click="goToEvent(event.id)">view production</button>
+	          </div>
+	        </div>
+	      </div><!-- perform-grid-md -->
+	    </div>
+	  </div>
+
+	<div class="big-gray-box sponsors">
+	<h3>SPONSORS</h3>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="sponsors sponsors-tours">
+					<img src="/images/sponsors/(2)Andrew-Mellon-Foundation-logo.png">
+					<img src="/images/sponsors/(3)Robert-Sterling-Clark-Foundation.png">
+					<img src="/images/sponsors/(4)NYSCA-Logo---Black.png">
+					<img src="/images/sponsors/(5)NYC-Culture-logo.png">
+					<img src="/images/sponsors/350px-TCG_Logo.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<stay-intouch></stay-Intouch>
+<footer-block></footer-block>

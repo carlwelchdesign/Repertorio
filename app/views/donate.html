@@ -1,0 +1,63 @@
+<div class="donate row">
+	<div class="hero"bg-loader bgid="pageData.custom_fields.hero_image[0]">
+		<div class="sharethis">
+			<span class='st_facebook_custom'><img src="http://repertorio.nyc/images/social-fb.png" onmouseover="this.src='http://repertorio.nyc/images/social-fb-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-fb.png'" /></span>
+			<span class='st_twitter_custom'><img src="http://repertorio.nyc/images/social-tw.png" onmouseover="this.src='http://repertorio.nyc/images/social-tw-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-tw.png'" /></span>
+		</div>
+		<div class="vert-mid">
+			<h1>{{pageData.title}}</h1>
+		</div>
+	</div>
+	<div class="big-black-box">
+		<div class="col-md-12 txt-area">
+			<p ng-bind-html="pageData.custom_fields.donate_top_copy[0]">
+				
+			</p>
+		</div>
+	</div>
+
+	<div class="big-white-box contests">
+		<h3 class="contests-head">{{pageData.custom_fields.section_headline[0]}}</h3>
+			<div class="row contests">
+				<div class="col-lg-3 col-md-6 contests context-box">
+					<div class="icon productions" ng-bind-html="pageData.custom_fields.box_1_content">
+						<!-- <h4>productions</h4>
+						<p>
+							Repertorio produces up to 5 new productions each season and we need your support to make that happen. Your contribution to one or more of our upcoming productions will go towards things like set design, costumes, and lighting. Become a sponsor of new productions today!
+						</p> -->
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 contests context-box">
+					<div class="icon education" ng-bind-html="pageData.custom_fields.box_2_content">
+						<!-- <h4>education</h4>
+						<p>
+							Did you know your contribution can allow for a child to see a play for the very first time? With your generous contribution to Repertorio's education program ¡Dignidad!, students from across the New York Area can attend a matinee performance with their school for a subsidized rate.
+						</p> -->
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 contests context-box">
+					<div class="icon greatest-need" ng-bind-html="pageData.custom_fields.box_3_content">
+						{{pageData.custom_fields.column_left}}
+						<!-- <h4>greatest need</h4>
+						<p>
+							Ticket sales account for only half of Repertorio's operating expenses. Your contribution to our greatest needs goes towards areas such as maintaining our theatre space; hiring new actors, directors, designers and talent; and spreading the word about Repertorio. Help us continue our legacy of excellent Spanish theater.
+						</p> -->
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6 contests context-box">
+					<div class="icon capitol" ng-bind-html="pageData.custom_fields.box_4_content">
+						{{pageData.custom_fields.column_right}}
+						<!-- <h4>capital</h4>
+						<p>
+							Your support towards capital projects allows for Repertorio to plan for the future and keep the theater up to date with technology and building improvements, among others. With your support toward capital projects we can continue to keep Repertorio the #1 Spanish language theater in the nation.
+						</p> -->
+					</div>
+				</div>
+		</div>
+	</div>
+	<iframe style="margin-top:30px" class="frame" frameBorder="0" width="100%" height="1700" seamless src="https://repertorio.secure.force.com/donate?dfId=a0qE0000000T6QCIA0"></iframe>
+</div>
+<footer-block></footer-block>

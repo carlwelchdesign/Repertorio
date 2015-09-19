@@ -1,0 +1,99 @@
+<div class="event">
+  <div class="col-sm-12 event-hero" style="background: url('images/shows/{{event.id}}.jpg') right center/cover #000">
+    <div class="sharethis">
+		<span class='st_facebook_custom'><img src="http://repertorio.nyc/images/social-fb.png" onmouseover="this.src='http://repertorio.nyc/images/social-fb-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-fb.png'" /></span>
+		<span class='st_twitter_custom'><img src="http://repertorio.nyc/images/social-tw.png" onmouseover="this.src='http://repertorio.nyc/images/social-tw-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-tw.png'" /></span>
+	</div>
+	<div class="announce vert-mid">
+      <h1>{{event.name}}</h1>
+      <div ng-bind-html='event.detail'></div>
+    </div>
+  </div>
+   <div class="big-dark-box">
+    <div class="vert-mid">
+      <div class="col-md-8 event-detail">
+        <p ng-bind-html='event.description'></p>
+        <div class="performance_info_container">
+          <div class="performance_info youth"></div>
+          <div class="performance_info adults"></div>
+          <div class="performance_info general_audience"></div>
+          <div class="performance_info violence"></div>
+          <div class="performance_info language"></div>
+          <div class="performance_info sexual_content"></div>
+          <div class="performance_info nudity"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-7">
+      <div class="featured">
+        <div class="events">
+
+          <h2>UPCOMING PERFORMANCES</h2>
+
+          <div ng-repeat="show in event.instances | limitTo: 6 | isFuture" class="upcoming-show">
+            <div class="plabel">
+              <p>{{show.name}}</p>
+              <button ng-click="setPurchaseUrl(show.purchaseUrl)">buy tickets</button>
+            </div>
+          </div> 
+          <p>Please call 212-225-9999 for information and reservations for Group Sales, Combotickets, Gift Certificates, and Accessibility seating.</p>
+          <img src="images/performance/event-icons.png" style="max-width:360px; width:100%;">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-5 calendar">
+      <h2>PERFORMANCES THIS MONTH</h2>
+
+      <div ng-controller="calendarController">
+        <jqx-calendar ng-model="date" jqx-settings="calendarSettings" id="eventWidget"></jqx-calendar>
+      </div>
+
+      <!-- <p>Selected Date: {{ data.date | date:'yyyy-MM-dd HH:mm' }}</p> -->
+    </div>
+    <div class="col-md-12 gallery">
+      <img ng-if="event.id!=''" ng-src="images/shows/{{event.id}}-featured.jpg" err-src="images/err.png">
+    </div>
+ 
+  </div>
+
+
+  <!-- <div class="big-gray-box prepare-visit">
+    <h3>PREPARING FOR YOUR VISIT</h3>
+  </div> -->
+  <div class="faq col-md-12">
+    <h3 class="prepare-visit">Frequently Asked Questions</h3>
+    <div class="faq-items fist-column col-md-6">
+      <div class="faq-item">
+        <h3>Where is Repertorio Español located?</h3>
+        <p>Repertorio is located at 138 East 27th Street in Manhattan between Lexington and Third Avenues. The closest MTA stations are located on 28th Street, which include the 6, N, & R trains. If traveling by car from New Jersey, please plan ahead as delays are very common. </p>
+      </div>
+      <div class="faq-item">
+        <h3>If I’m coming by car, where can I park?</h3>
+        <p>The closest parking garage is Icon Parking located on East 29th Street between Lexington and Third Avenues. Parking must be validated at the theater’s box office in order to receive the discounted parking rate of $15 for 4 hours of parking. </p>
+      </div>
+      <div class="faq-item">
+        <h3>Are your productions appropriate for children?</h3>
+        <p>Repertorio does not permit anyone under the age of 12 in the theater with the exception of those attending a specified children’s production. Some subject matter may not be suitable for those under 18, so please contact us in advance with any concerns.</p>
+      </div>
+    </div>
+    <div class="faq-items second-column col-md-6">
+      <div class="faq-item">
+        <h3>I can’t make the show. Can I change my ticket?</h3>
+        <p>Repertorio does not allow for exchanges or refunds once tickets are purchased. Refunds and exchanges can only be made in the event of a performance cancelation in which you will be notified immediately.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What restaurants are near to Repertorio?</h3>
+        <p>Repertorio is located near many restaurants including several West Asian and Middle Eastern style cuisine. Check out Yelp to see a listing of recommended restaurants in our area. </p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there translation available for all of your productions?</h3>
+        <p>No. There are some productions where translation is not available. Please contact us when purchasing tickets to inquire if translation is available for your desired performance date.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<stay-intouch></stay-Intouch>
+<footer-block></footer-block>

@@ -1,0 +1,49 @@
+<div class="about row">
+  <div class="hero" bg-loader bgid="pageData.custom_fields.hero_image[0]">
+		<div class="sharethis">
+			<span class='st_facebook_custom'><img src="http://repertorio.nyc/images/social-fb.png" onmouseover="this.src='http://repertorio.nyc/images/social-fb-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-fb.png'" /></span>
+			<span class='st_twitter_custom'><img src="http://repertorio.nyc/images/social-tw.png" onmouseover="this.src='http://repertorio.nyc/images/social-tw-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-tw.png'" /></span>
+		</div>
+		<div class="vert-mid">
+			<h1>
+				{{pageData.title}}
+			</h1>
+		</div>
+	</div>
+</div>
+<div class="big-black-box theater">
+	<p class="col-md-6 txt-area" ng-bind-html="pageData.custom_fields.left_column[0]">
+		<!-- The historic Gramercy Arts Theater was built in 1915 as The Davenport Free Theater, founded by Benjamin Butler Davenport to house his theater company which functioned solely on the voluntary donations of audiences as opposed to an admission. A firm believer of accessibility to the arts, he once stated that “I have dedicated my life to spreading the idea that nobody should pay for theater admissions. We have free schools, free art museums, free symphony concerts and libraries, why not theaters?” -->
+	</p>
+	<p class="col-md-6 txt-area" ng-bind-html="pageData.custom_fields.right_column[0]">
+		<!-- The Davenport Free Theater functioned as a repertory theater well into the 1940s, from which time it was rented out as a venue to various commercial productions. The building was later bought by Robinson Callen, a Korean War veteran and by 1971, the space had caught the eye of Repertorio Español’s founders, René Buch and Gilberto Zaldivar, as the perfect home for their young, three year old theater company. Repertorio continues to occupy and maintain the historic building today – restoring the iconic proscenium and perpetually assuring that the theater has state-of-the-art technology, including its Simultext ® Subtitling System that provides English translation to each individual audience member. --> 
+	</p>
+</div>
+
+
+
+
+<!-- Carousel
+================================================== -->
+<h3 class="gallery">GALLERY</h3>
+<slick infinite="true" swipe-to-slide="true" touch-move="true" arrows="true" autoplaySpeed="3000" style="width:90%;">    
+  <div class="item">
+    <div class="container">
+      <img src="images/gallery/GramercyArts1.png">
+    </div>
+  </div>
+  <div class="item">
+    <div class="container">
+      <img src="images/gallery/GramercyArts2.png">
+    </div>
+  </div>
+  <div class="item">
+    <div class="container">
+      <img src="images/gallery/GramercyArts3.png">
+    </div>
+  </div>
+
+</slick>
+<!-- /.carousel -->
+<stay-intouch></stay-Intouch>
+<footer-block></footer-block>

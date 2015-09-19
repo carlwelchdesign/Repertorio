@@ -1,0 +1,205 @@
+<div class="education row">
+	<div class="hero" style="background: url(http://104.131.7.53/admin/wp-content/uploads/2015/07/education-hero.jpg) 50% 50% / cover no-repeat;">
+		<div class="sharethis">
+			<span class='st_facebook_custom'><img src="http://repertorio.nyc/images/social-fb.png" onmouseover="this.src='http://repertorio.nyc/images/social-fb-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-fb.png'" /></span>
+			<span class='st_twitter_custom'><img src="http://repertorio.nyc/images/social-tw.png" onmouseover="this.src='http://repertorio.nyc/images/social-tw-ro.png'" onmouseout="this.src='http://repertorio.nyc/images/social-tw.png'" /></span>
+		</div>
+		
+		<div class="vert-mid">
+			
+			<h1>{{pageData.title}}</h1>
+		</div>
+	</div>
+	<div class="big-black-box">
+		<div class="col-md-6 txt-area" ng-bind-html="pageData.custom_fields.column_left">
+			
+		</div>
+		<div class="col-md-6 txt-area">
+			<p class="quote" ng-bind-html="pageData.custom_fields.column_right">
+				<!-- <img class="quote-top" src="/images/quote-top.png">
+				
+				<img class="quote-bottom" src="/images/quote-bottom.png"> -->
+			</p>
+		</div>
+	</div>
+	<div class="big-gray-box">
+		<div ng-bind-html="pageData.custom_fields.matinee_performances"></div>
+		<div class="col-md-12">
+			<button class="leftBtn" OnClick="location.href='/#/signup'">{{pageData.custom_fields.matinee_button_1_text[0]}}</button>
+			<button OnClick="location.href='/#/performances'">{{pageData.custom_fields.matinee_button_2_text[0]}}</button>
+		</div>
+		
+	</div>
+
+	<div class="col-md-12 big-red-box">
+		  <h3>{{pageData.custom_fields.in_school_residency_title[0]}}</h3>
+		  <div class="col-md-6 left-side">
+		  	<p ng-bind-html="pageData.custom_fields.in_school_residency_left_column[0]"></p>
+		  	<!-- <p>Professional teaching artists lead these residencies. They are working playwrights and actors with previous teaching experience at all levels. In partnership with classroom teachers and school administrators, we create a series of sequential lessons designed to enhance classroom assignments as well as expand the students’ creativity and emotional expression. These lessons follow the New York City Blueprint for teaching the Performing Arts, the New York State Learning Standards and will address the new Common Core Curriculum. </p>
+			<p>Workshops are taught in English and/or Spanish, and often reach students who ordinarily would not have the opportunity to actively participate in theatre. This exposure builds on their literacy skills, critical and analytical thinking as well as their self-awareness, self-expression and overall creativity—skills that can translate into other academic subjects and their personal lives. </p>
+			<p>Students will learn acting techniques and the n an established text. Long-term residencies have a culminating event at Repertorio, using our sound system, lights, coscraft of playwriting and are required to create fully developed original monologues, group scenes or an adaptation based otumes and props in front of an audience of their peers, teachers and parents.</p> -->
+			<p>
+		  		<button OnClick="location.href='/#/contact'">Contact Us</button>
+		  	</p>
+
+		  </div>
+		  <div class="col-md-6 full-height">
+
+<!-- 		  	{{pageData.custom_fields.in_school_residency_right_column[0].toString()}}
+ -->		  	
+ 			<!--<vimeo vid="{{pageData.custom_fields.in_school_residency_right_column[0]}}" pid="1" width="100%" height="80%"></vimeo>-->
+		  	<iframe ng-bind-html="to_trusted" src="https://player.vimeo.com/video/63399558" width="100%" height="80%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+		  </div>
+		
+	</div>
+
+	<div class="big-gray-box group-sales">
+
+		<p ng-bind-html="pageData.custom_fields.group_sales"></p>
+		<!-- <h3>GROUP SALES</h3>
+		<p>Are you interested in bringing a group of 10 or more students to one of our productions? Repertorio offers reduced ticket process to school groups thanks to the support from our generous sponsors. Please contact us to inquire about school group tickets. <a href="tel:+12122259999">212.225.9999</a></p> -->
+		<br/>
+		<button OnClick="location.href='/#/contact'">contact us</button>
+
+	</div>
+
+	<div class="row">
+	  <div class="col-md-6 teachers box" bg-loader bgid="pageData.custom_fields.box_1_background_image[0]">
+	    <div class="vert-mid">
+	      <h3>{{pageData.custom_fields.box_1_title[0]}}</h3>
+	      <hr>
+	      <p ng-bind-html="pageData.custom_fields.box_1_content"><!-- Teachers may see a production in advance with a pair of free tickets in order to determine whether it is appropriate for theirstudents.   -->
+	      </p>
+	      <button OnClick="location.href='/#/contact'">contact us</button>
+	    </div>
+	  </div>
+	  <div class="col-md-6 touring-to-schools box"> 
+	    <div class="vert-mid">
+	      <h3>{{pageData.custom_fields.box_2_title[0]}}</h3>
+	      <hr>
+	      <p ng-bind-html="pageData.custom_fields.box_2_content"><!-- Repertorio offers schools an opportunity to have a performance in their own building. Translation may also be available for these performances. Contact <a href="mailto:tours@repetorio.org">tours@repetorio.org</a> for additional information. -->
+	      </p>
+	      <button OnClick="location.href='/#/contact'">contact us</button>
+	    </div>
+	  </div>
+	  <div class="col-md-6 study-guides box">
+	    <div class="vert-mid">
+	      <h3>{{pageData.custom_fields.box_3_title[0]}}</h3>
+	      <hr>
+	      <p ng-bind-html="pageData.custom_fields.box_3_content"><!-- Prepared by education professionals and available free-of-charge on our website. These guides serve as tools for teachers to prepare their students before a performance and to integrate the theater experience into their classroom. -->
+	      </p>
+	      <div class="buttons">
+			<select>
+				<option value="">STUDY GUIDES</option>
+				<option value="/pdf/Cronica_Study_Guide.pdf">Crónica de una Muerte Anunciada</option>
+				<option value="/pdf/Quijote_Study_Guide.pdf">El Quijote</option>
+				<option value="/pdf/Mariposas_Study_Guide.pdf">En el Tiempo de las Mariposas</option>
+				<option value="/pdf/Alba_Study_Guide.pdf">La Casa de Bernarda Alba</option>
+				<option value="/pdf/Gringa_Study_Guide.pdf">La Gringa</option>
+			</select>
+			<button class="download black">DOWNLOAD</button>
+		  </div>
+	    </div>
+	  </div>
+	  <div class="col-md-6 translations box" bg-loader bgid="pageData.custom_fields.box_4_background_image[0]">
+	    <div class="vert-mid">
+	      <h3>{{pageData.custom_fields.box_4_title[0]}}</h3>
+	      <hr>
+	      <p ng-bind-html="pageData.custom_fields.box_4_content"><!-- A new Simultext® Captioning System offers subtitles in English and Spanish* through video screens installed in every seat.    -->
+	      </p>
+	      <!--<button OnClick="location.href='/#/contact'">contact us</button>-->
+	    </div>
+	  </div>
+	</div>
+	<div class="big-white-box">
+		<h3>{{pageData.custom_fields.contest_title[0]}}</h3>
+		<h4>{{pageData.custom_fields.contest_sub_title[0]}}</h4>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="icon best-review">
+						<h4>best review</h4>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<div class="icon best-play">
+						<h4>best play</h4>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<div class="icon best-act">
+						<h4>best act III</h4>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<div class="icon best-poster">
+						<h4>best poster</h4>
+					</div>
+				</div>
+			</div>
+
+			<p>{{pageData.custom_fields.contest_content[0]}}</p>
+
+			<button>{{pageData.custom_fields.contest_button_1_text[0]}}</button>
+			<!--<a href="/pdf/Education-Contest-Past-Winners.pdf" target="_blank"><button>VIEW PAST WINNERS</button></a>-->
+			<a href="{{pageData.attachments[0].url}}" target="_blank"><button>{{pageData.custom_fields.contest_button_2_text[0]}}</button></a>
+		</div>
+	</div>
+	<div class="big-gray-box sponsors">
+		<h3>SPONSORS</h3>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="sponsors">
+					<img src="/images/sponsors/(1)william-randolph-hearst-foundation.png" style="max-width: ">
+					<img src="/images/sponsors/(2)LIZ-KRUEGER.png">
+					<img src="/images/sponsors/(3)NYC-Culture.png">
+					<img src="/images/sponsors/(4)NYSCA-Logo---Black.png">
+					<img src="/images/sponsors/(5)NEA.png">
+					<img src="/images/sponsors/(6)ConEdison.png">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="sponsors">
+					<img src="/images/sponsors/(7)Goya-BLACK-XOUT.png">
+					<img src="/images/sponsors/(8)New-logo-Telemundo-3-2014.png">
+					<img src="/images/sponsors/(9)Peter-J-Solomon.png">
+					<img src="/images/sponsors/(10)SonyLogo-BW.png">
+					<img src="/images/sponsors/(11)wells-fargo-logo-black.png">
+					<img src="/images/sponsors/(12)memorial-fund.png">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="sponsors">
+					<img src="/images/sponsors/(13)JosephClare.png">
+					<img src="/images/sponsors/(14)KennethHazel.png">
+					<img src="/images/sponsors/(15)AdolphRuth.png">
+					<img src="/images/sponsors/(16)HispanicFederation-BW.png">
+					<img src="/images/sponsors/(17)TheFriars.png">
+					<img src="/images/sponsors/(18)Robert-Sanselman.png">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="row">
+				<div class="sponsors">
+					<img src="/images/sponsors/(19)RichardHolzer.png">
+					<img src="/images/sponsors/(20)MauriceRecanati.png">
+					<img src="/images/sponsors/(21)MariaDelCarmen.png">
+					<img src="/images/sponsors/(22)RosieMendez.png">
+					<img src="/images/sponsors/(23)DANIEL-GARODNICK.png">
+					<img src="/images/sponsors/(24)YDANIS-RODRiGUEZ.png">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<stay-intouch></stay-Intouch>
+<footer-block></footer-block>

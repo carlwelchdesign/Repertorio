@@ -1,0 +1,155 @@
+<div class="home">
+  <div id="pagepiling" class="page-piling">
+    <div class="section">
+      <div class="col-sm-12 home-hero aspectwrapper" style="background: url('images/shows/a0SE00000006XJJMA2.jpg') right center/cover #000"> 
+        <div class="announce content">
+          <h1>DOÑA FLOR Y SUS DOS MARIDOS</h1>
+          <p>A bawdy farce in the streets of Bahía, Brazil brought to life with soap-opera star Francisco Gattorno.</p>
+          <button ng-click="goToEvent('a0SE00000006XJJMA2')">purchase tickets</button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="col-sm-12 home-hero aspectwrapper" style="background: url('images/shows/a0SE000000GyHZMMA3.jpg') center center/cover #000">
+      <div class="announce content">
+        <h1>EN LA USA ME QUEDÉ</h1>
+        <p>The latest one-man-show by Spanish language comedian, Saulo García.</p>
+        <button ng-click="goToEvent('a0SE000000GyHZMMA3')">purchase tickets</button>
+      </div>
+    </div>
+    </div>
+    <div class="section">
+      <div class="col-sm-12 home-hero aspectwrapper"  style="background: url('images/shows/a0SE000000Ia5CLMAZ.jpg') right center/cover #000">
+        <div class="announce content">
+          <h1>HIERBA MALA NUNCA MUERE</h1>
+          <p>The hysterical, critically acclaimed comedy that follows the adventures of a dictator well past his prime and those sent to kill him off.</p>
+          <button ng-click="goToEvent('a0SE000000Ia5CLMAZ')">purchase tickets</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section pp-scrollable">
+  
+      <div class="other-prod">
+        <h2>OTHER PRODUCTIONS</h2>
+        <div class="row">
+          <div id="perform-grid-md" class="home flush-right responsive">
+            <slick class="responsive" infinite="true" slides-to-show="4" slides-to-scroll="1" swipe-to-slide="true" touch-move="true" data="events" arrows="true" ng-if="events.length" autoplay="true" autoplaySpeed="3000">
+            
+              <div ng-repeat="event in events | limitTo: 6" ng-if="event.id!='a0SE0000006vwXVMAY'" class="production" style="background: url('images/shows/{{event.id}}-sm.jpg')">
+                <div class="plabel">
+                  <h4>{{event.name}}</h4>
+                  <hr>
+                  <button ng-click="goToEvent(event.id)">purchase tickets</button>
+                </div>
+              </div>
+
+            </slick>
+            <button id="view-all" ng-click="goToPage('performances')">view all productions</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 big-red-box">
+        <div class="vert-mid">
+        <h3>Comboticket subscriptions and gift certificates available</h3>
+        <button onclick="window.location.href='#/performances#info-box'">read more</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 education box">
+          <div class="vert-mid">
+            <h3>education</h3>
+            <hr>
+            <p>From discounted tickets for students and teachers to the in-school residency program, find out more about our mission and dedication to reaching young audiences across Greater New York and beyond. 
+            </p>
+            <button OnClick=" location.href='#/education'">learn more</button>
+          </div>
+        </div>
+        <div class="col-md-6 touring box">
+          <div class="vert-mid">
+            <h3>Touring</h3>
+            <hr>
+            <p>Want to know if Repertorio can come to your neighborhood and city? Check out our list of available touring productions and submit your request today!<br>&nbsp;</p>
+            <button OnClick=" location.href='#/tours'">learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 big-white-box">
+        <div class="vert-mid">
+          <h3>donate</h3>
+          <p>Whether you’re a first time giver or a longtime supporter, your contribution is vital to the future of Repertorio and its various programs. Take a moment to see how your support makes a powerful impact. </p>
+          <button OnClick=" location.href='#/donate'">SUPPORT REPERTORIO</button>
+        </div>
+      </div>
+      <div class="col-md-12 big-black-box feeds">
+        <div class="col-md-6 blog-feed">
+          <div class="col-sm-12  col-md-6 blog feed-box first-blog" style="background:url(../images/blog_images/bramhall-playhouse-balcony2.png) center center/cover no-repeat;">
+            <div class="col-sm-12 panel">
+              <div class="desc">
+                <h2>#THROWBACKTHURSDAY</h2>
+                <h3>VINTAGE PHOTOS OF REPERTORIO FROM 1930S-1940S</h3>
+                <div class="link"><a href="http://elcamerinonyc.com/2015/06/11/throwbackthursday-vintage-photos-of-repertorio-from-1930s-1940s/" target="_blank">read more</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 blog feed-box second-blog" style="background:url(../images/blog_images/estefanc3ada-fadul-by-shelly-rodrc3adguez.jpg) center center/cover no-repeat;">
+            <div class="col-sm-12 panel">
+              <div class="desc">
+                <h2>GUEST POST</h2>
+                <h3>WHY SEE A SIGLO DE ORO PLAY, BY VAN LIER FELLOW ESTEFANIA FADUL</h3>
+                <div class="link"><a href="http://elcamerinonyc.com/2015/06/03/guest-post-why-see-a-siglo-de-oro-play-by-van-lier-fellow-estefania-fadul/" target="_blank">read more</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 social-feed">
+          <h1>Connect with us.</h1>
+          <div class="col-md-6 tweet-box">
+            <img src="images/share/twitter-feed.png">
+              <div class="feed-item">
+              Repertorio Español ‏@repertorionyc  Jun 26
+    Spanish Golden Age Festival: The opening of "El laurel de Apolo""  - http://eepurl.com/brpiwH 
+            </div>
+             <div class="link"><a href="https://twitter.com/repertorionyc" target="_blank">read more</a></div>
+          </div>
+          <div class="col-md-6 fb-box">
+            <img src="images/share/fb-feed.png">
+            <div class="feed-item">
+              An important PSA from the ‪#‎VanLier‬ directors!
+            </div>
+            <div class="link"><a href="https://www.facebook.com/repertorionyc" target="_blank">read more</a></div>
+          </div>
+        </div>
+      </div>
+      <stay-intouch></stay-Intouch>
+      <footer-block></footer-block>
+    </div>
+  </div>
+  <ul id="pp-dots">
+    <li>
+      <a class="dot-button pp-functions" section="1">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+    <li>
+      <a class="dot-button pp-functions" section="2">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+    <li>
+      <a class="dot-button pp-functions" section="3">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+    <li>
+      <a class="dot-button pp-functions" section="4">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="pp-arrow" section="4">
+  <a class="pp-functions" section="4">
+    <img src="images/home/arrow-scrolldown.png">
+  </a>
+</div>

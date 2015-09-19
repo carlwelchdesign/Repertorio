@@ -1,0 +1,232 @@
+<div class="home">
+  <div id="pagepiling" class="page-piling">
+    <div class="section">
+
+      <div class="col-sm-12 home-hero aspectwrapper" style="background: url({{getImage(pageData.custom_fields.top_slider_image_1[0])}}) right center/cover #000">
+        <div class="announce content">
+          <h1>
+            {{pageData.custom_fields.top_slider_show_title_1[0]}}
+          </h1>
+          <p>
+            {{pageData.custom_fields.top_slider_show_description_1[0]}}
+          </p>
+
+          <a href="/#/event/{{pageData.custom_fields.top_slider_id_1[0]}}"><button>
+
+            <!-- buy tickets -->
+            {{pageData.custom_fields.top_slider_show_1_button[0]}}
+          </button></a>
+        </div>
+      </div>
+      <a class="view-cal" href="#/performances"><button>view calendar</button></a>
+    </div>
+	
+	<div class="section">
+
+      <div class="col-sm-12 home-hero aspectwrapper" style="background: url({{getImage(pageData.custom_fields.top_slider_image_2[0])}}) right center/cover #000">
+              <div class="announce content">
+                <h1>
+                  {{pageData.custom_fields.top_slider_show_title_2[0]}}
+                </h1>
+                <p>
+                  {{pageData.custom_fields.top_slider_show_description_2[0]}}
+                </p>
+
+                <a href="/#/event/{{pageData.custom_fields.top_slider_id_2[0]}}"><button>
+
+                  <!-- buy tickets -->
+                  {{pageData.custom_fields.top_slider_show_2_button[0]}}
+                </button></a>
+              </div>
+            </div>
+      <a class="view-cal" href="#/performances"><button>view calendar</button></a>
+    </div>
+	
+    <div class="section">
+
+      <div class="col-sm-12 home-hero aspectwrapper" style="background: url({{getImage(pageData.custom_fields.top_slider_image_3[0])}}) right center/cover #000">
+              <div class="announce content">
+                <h1>
+                  {{pageData.custom_fields.top_slider_show_title_3[0]}}
+                </h1>
+                <p>
+                  {{pageData.custom_fields.top_slider_show_description_3[0]}}
+                </p>
+
+                <a href="/#/event/{{pageData.custom_fields.top_slider_id_3[0]}}"><button>
+
+                  <!-- buy tickets -->
+                  {{pageData.custom_fields.top_slider_show_3_button[0]}}
+                </button></a>
+              </div>
+            </div>
+      <a class="view-cal" href="#/performances"><button>view calendar</button></a>
+    </div>
+
+    <div id="scroll-panel" class="section pp-scrollable">
+  
+      <div class="other-prod">
+        <h2>{{pageData.custom_fields.other_productions[0]}}</h2>
+        <div class="row">
+          <div id="perform-grid-md" class="home flush-right responsive">
+           <!--  <slick class="responsive" data="events" arrows="true" ng-if="events.length" infinite="true" slides-to-show="4" slides-to-scroll="1" swipe-to-slide="true" touch-move="true" autoplay="true" autoplaySpeed="3000" dots="false" speed="300" accessibility="true" dragabble="true" easing="linear" mobileFirst="true" pauseOnHover="true" swipe="true" touchThreshold="5" variableWidth="true" useCSS="true"> 
+            <slick class="responsive" arrows="true" slides-to-show="1" infinite="true" slides-to-scroll="1" variableWidth="true">-->
+            <slick infinite=true slides-to-show=1 slides-to-scroll=1 arrows=true>
+              <!-- // Slide 1 -->
+              <div class="production" style="background: url('images/shows/a0SE00000091kAZMAY-sm.jpg')">
+                  <div class="plabel">
+                    <h4>CITA A CIEGAS</h4>
+                  <hr>
+                  <button ng-click="goToEvent('a0SE00000091kAZMAY')">buy tickets</button>
+                </div>
+              </div>
+              <!-- // Slide 2 -->
+              <div class="production" style="background: url('images/shows/a0SE000000IaYFaMAN-sm.jpg')">
+                  <div class="plabel">
+                    <h4>EL LAUREL DE APOLO</h4>
+                    <hr>
+                    <button ng-click="goToEvent('a0SE000000IaYFaMAN')">buy tickets</button>
+                </div>
+              </div>
+              <!-- // Slide 3 -->
+              <div class="production" style="background: url('images/shows/a0SE000000E8fBeMAJ-sm.jpg')">
+                  <div class="plabel">
+                    <h4>AIRE FRÍO</h4>
+                    <hr>
+                    <button ng-click="goToEvent('a0SE000000E8fBeMAJ')">buy tickets</button>
+                </div>
+              </div>
+              <!-- // Slide 4 -->
+              <div class="production" style="background: url('images/shows/a0SE00000091kAUMAY-sm.jpg')">
+                  <div class="plabel">
+                    <h4>LA NENA SE CASA</h4>
+                    <hr>
+                    <button ng-click="goToEvent('a0SE00000091kAUMAY')">buy tickets</button>
+                </div>
+              </div>
+              <!-- // Slide 5 -->
+              <div class="production" style="background: url('images/shows/a0SE00000006V33MAE-sm.jpg')">
+                  <div class="plabel">
+                    <h4>EN EL TIEMPO DE LAS MARIPOSAS</h4>
+                    <hr>
+                    <button ng-click="goToEvent('a0SE00000006V33MAE')">buy tickets</button>
+                </div>
+              </div>
+              <!-- // Slide 6 -->
+              <div class="production" style="background: url('images/shows/a0SE000000NXn6PMAT-sm.jpg')">
+                  <div class="plabel">
+                    <h4>LA TÍA JULIA Y EL ESCRIBIDOR</h4>
+                    <hr>
+                    <button ng-click="goToEvent('a0SE000000NXn6PMAT')">buy tickets</button>
+                </div>
+              </div> <!-- last slide -->
+
+            </slick>
+            <button id="view-all" ng-click="goToPage('performances')">view all productions</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 big-red-box">
+        <div class="vert-mid">
+        <h3>Comboticket subscriptions and gift certificates available</h3>
+        <button onclick="window.location.href='#/performances#info-box'">read more</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 education box">
+          <div class="vert-mid">
+            <h3>education</h3>
+            <hr>
+            <p>From discounted tickets for students and teachers to the in-school residency program, find out more about our mission and dedication to reaching young audiences across Greater New York and beyond. 
+            </p>
+            <button OnClick="location.href='#/education'">learn more</button>
+          </div>
+        </div>
+        <div class="col-md-6 touring box">
+          <div class="vert-mid">
+            <h3>Touring</h3>
+            <hr>
+            <p>Want to know if Repertorio can come to your neighborhood and city? Check out our list of available touring productions and submit your request today!<br>&nbsp;</p>
+            <button OnClick=" location.href='#/tours'">learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 big-white-box">
+        <div class="vert-mid">
+          <h3>donate</h3>
+          <p>Whether you’re a first time giver or a longtime supporter, your contribution is vital to the future of Repertorio and its various programs. Take a moment to see how your support makes a powerful impact. </p>
+          <button OnClick=" location.href='#/donate'">SUPPORT REPERTORIO</button>
+        </div>
+      </div>
+      <div class="col-md-12 big-black-box feeds">
+        <div class="col-md-6 blog-feed">
+          <div class="col-sm-12  col-md-6 blog feed-box first-blog" style="background:url(../images/blog_images/bramhall-playhouse-balcony2.png) center center/cover no-repeat;">
+            <div class="col-sm-12 panel">
+              <div class="desc">
+                <h2>#THROWBACKTHURSDAY</h2>
+                <h3>VINTAGE PHOTOS OF REPERTORIO FROM 1930S-1940S</h3>
+                <div class="link"><a href="http://elcamerinonyc.com/2015/06/11/throwbackthursday-vintage-photos-of-repertorio-from-1930s-1940s/" target="_blank">read more</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 blog feed-box second-blog" style="background:url(../images/blog_images/estefanc3ada-fadul-by-shelly-rodrc3adguez.jpg) center center/cover no-repeat;">
+            <div class="col-sm-12 panel">
+              <div class="desc">
+                <h2>GUEST POST</h2>
+                <h3>WHY SEE A SIGLO DE ORO PLAY, BY VAN LIER FELLOW ESTEFANIA FADUL</h3>
+                <div class="link"><a href="http://elcamerinonyc.com/2015/06/03/guest-post-why-see-a-siglo-de-oro-play-by-van-lier-fellow-estefania-fadul/" target="_blank">read more</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 social-feed">
+          <h1>Connect with us.</h1>
+          <div class="col-md-6 tweet-box">
+            <img src="images/share/twitter-feed.png">
+              <div class="feed-item">
+              Repertorio Español ‏@repertorionyc  Jun 26
+    Spanish Golden Age Festival: The opening of "El laurel de Apolo"  - http://eepurl.com/brpiwH 
+            </div>
+             <div class="link"><a href="https://twitter.com/repertorionyc" target="_blank">read more</a></div>
+          </div>
+          <div class="col-md-6 fb-box">
+            <img src="images/share/fb-feed.png">
+            <div class="feed-item">
+              An important PSA from the ‪#‎VanLier‬ directors!
+            </div>
+            <div class="link"><a href="https://www.facebook.com/repertorionyc" target="_blank">read more</a></div>
+          </div>
+        </div>
+      </div>
+      <stay-intouch></stay-Intouch>
+      <footer-block></footer-block>
+    </div>
+  </div>
+  <ul id="pp-nav">
+    <li>
+      <a href="javascript:void(0)" class="dot-button pp-functions" section="1">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)" class="dot-button pp-functions" section="2">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)" class="dot-button pp-functions" section="3">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:void(0)" class="dot-button pp-functions" section="4">
+        <span style="border-color: rgb(255, 255, 255);"></span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="pp-arrow" section="4">
+  <a href="javascript:void(0)" class="pp-functions" section="4">
+    <img src="images/home/arrow-scrolldown.png">
+  </a>
+</div>

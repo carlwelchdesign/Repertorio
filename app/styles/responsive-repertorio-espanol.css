@@ -1,0 +1,32 @@
+@media screen and (max-width:991px){
+
+	.repertorio-espanol .big-gray-box p {
+		width: 100%;
+		padding: 0 25px;
+	}
+
+	.repertorio-espanol .big-black-box.annual-reports select{
+		padding: 0 25px 0 25px;
+	}
+
+}
+
+@media screen and (max-width:600px){
+
+	.repertorio-espanol .big-black-box .txt-area {
+		padding: 40px;
+	}
+
+	.repertorio-espanol .big-black-box.annual-reports select{
+		padding: 0 10px;
+		margin-right: 0px;
+		margin-bottom: 20px;
+		display: table;
+		max-width: 200px;
+	}
+	.repertorio-espanol .big-black-box.annual-reports button{
+		margin: 0 auto;
+		display: table;
+	}
+
+}

@@ -1,0 +1,9 @@
+<div id="search-box" ng-controller="SearchController">
+	<div class="close-search"></div>
+	<input type="search" ng-model="search" placeholder="Search for shows..." autofocus>
+	<ul>
+        <li ng-if="search" ng-repeat="event in events | filter:search">
+            <a href="#/event/{{event.id}}">{{ event.name }}</a>
+        </li>
+    </ul>
+</div>
