@@ -9,9 +9,9 @@
 */
 
 
-angular.module('repertorioApp').controller('EventCtrl', function ($rootScope, $scope, $routeParams, $location, $window, $filter) {
+angular.module('repertorioApp').controller('EventCtrl', function ($http, $timeout, $rootScope, $scope, $routeParams, $location, $window, $filter, PatronData) {
 	$('#search-box').fadeOut();
-
+	//$rootScope.events = PatronData.init();
 	function buildCalendarDates(){
 		var theEvent = [];
 		theEvent = ($filter('filter')($rootScope.events, {id: $routeParams.id}));
@@ -21,9 +21,31 @@ angular.module('repertorioApp').controller('EventCtrl', function ($rootScope, $s
 		getCalendarDates($scope.event);
 	};
 
-	$scope.$on('$viewContentLoaded', function(){
-    	buildCalendarDates();
-  	});
+	
+
+
+		// $scope.$on('$viewContentLoaded', function(){
+	 //    	buildCalendarDates();
+	 //  	});
+  	// $scope.$on('$viewContentLoaded', function(event) {
+   //    $timeout(function() {
+   //      buildCalendarDates();
+   //    },0);
+   //  });
+    var url = 'data/PatronTicket__PublicApiEventList.json';
+    var result;
+	$http.get(url)
+	     .then(function(res){
+	         console.log('init');
+	         result = JSON.stringify(res);
+	         result = JSON.parse(result);
+	         console.log(res.data.events);
+	         $rootScope.events = res.data.events;
+	         console.log('init: '+$rootScope.events);
+	         //return res.data.events; 
+	         buildCalendarDates();     
+	      });
+
 
   	$scope.setPurchaseUrl = function(pu){
   		var url = pu;
@@ -40,10 +62,10 @@ angular.module('repertorioApp').controller('EventCtrl', function ($rootScope, $s
 	function getCalendarDates(d){
 		console.log('getCalendarDates: '+d);
 		var today = new Date();
-    	//today = moment(today).format('MMM-DD-YYYY')+' 1:00AM';
-
-		for (var h = d.instances.length - 1; h >= 0; h--) {
-			var showdate = moment(new Date(d.instances[h].name));
+		
+		console.log('d.instances.length equals: '+d.instances.length) //how many show times in the array?
+		for (var h = d.instances.length - 1; h >= 0; h--) { 
+			var showdate = moment(new Date(d.instances[h].name));			
 			var newdate = new Date(showdate);
 			var time = showdate.format('hh:mmA');
 			console.log(newdate+' / '+today);

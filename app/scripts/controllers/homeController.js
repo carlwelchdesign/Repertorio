@@ -29,8 +29,10 @@ angular.module('repertorioApp').controller('HomeCtrl', function ($scope, $locati
 
 
 	$scope.getImage = function(img_id) {
-		var result = $filter('filter')($rootScope.pageData.attachments, {id:img_id})[0];
-  		return result.url;
+		if(img_id){
+			var result = $filter('filter')($rootScope.pageData.attachments, {id:img_id})[0];
+  			return result.url;
+  		}
   	}
 
 });

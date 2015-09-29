@@ -9,7 +9,7 @@
 */
 
 
-angular.module('repertorioApp').controller('PerformancesCtrl', function ($rootScope, $scope, $routeParams, $location, $window, $filter) {
+angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, $rootScope, $scope, $routeParams, $location, $window, $filter) {
 
   // pull the json from WordPress
   // $rootScope.page_id = 130;
@@ -21,13 +21,28 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($rootSc
     extractDates($rootScope.events);
   };
 
-  buildCalendarDates();
+  //buildCalendarDates();
+
+    var url = 'data/PatronTicket__PublicApiEventList.json';
+    var result;
+    $http.get(url)
+         .then(function(res){
+             console.log('init');
+             result = JSON.stringify(res);
+             result = JSON.parse(result);
+             console.log(res.data.events);
+             $rootScope.events = res.data.events;
+             console.log('init: '+$rootScope.events);
+             //return res.data.events; 
+             buildCalendarDates();     
+          });
 
 
   function extractDates(d){
     
     var today = new Date();
-    today = moment(today).format('MM/DD/YY')+' 1:00AM';
+    //today = moment(today).format('MM/DD/YY')+' 1:00AM';
+	today = moment(today).format('YY/MM/DD')+' 1:00AM';
 
     var showDates = [];
     var i = d.length;
@@ -40,11 +55,14 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($rootSc
         for ( var h in thisEvent.instances) {
           var thisInstance = thisEvent.instances[h]
           var showdate = moment(new Date(thisInstance.name));
-          var shortDate = showdate.format('MM/DD/YY') + " " + showdate.format('h:mmA');
+		  //var shortDate = showdate.format('MM/DD/YY') + " " + showdate.format('h:mmA');
+          var shortDate = showdate.format('YY/MM/DD') + " " + showdate.format('h:mmA');
+		  var displayDate = showdate.format('MM/DD/YY') + " " + showdate.format('h:mmA');
           if(shortDate>today){
             var obj = { 
               name: eventname,
-              shortDate: shortDate,
+              displayDate: displayDate,
+			  shortDate: shortDate,
               longDate: showdate,
               purchaseUrl: thisInstance.purchaseUrl
             };
@@ -63,8 +81,8 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($rootSc
         }
       }
       $("#jqxWidget").jqxCalendar({ enableTooltips: true});
-    }
 
+    }
     $("#jqxWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
 
     $scope.showDates = showDates;
