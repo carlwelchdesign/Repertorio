@@ -12,10 +12,11 @@
 angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, $rootScope, $scope, $routeParams, $location, $window, $filter) {
 
   // pull the json from WordPress
-  // $rootScope.page_id = 130;
-  // PageLoader.getPage($rootScope.page_id, function(data) {
-  //     $rootScope.pageData = data;
-  // });
+  $rootScope.page_id = 299;
+  PageLoader.getPage($rootScope.page_id, function(data) {
+      $rootScope.pageData = data;
+      console.log($rootScope.pageData);
+  });
 
   function buildCalendarDates(){
     extractDates($rootScope.events);
