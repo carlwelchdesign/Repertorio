@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('repertorioApp').controller('HeaderController', function ($rootScope, $scope, $location, $localStorage, PageLoader) {
+angular.module('repertorioApp').controller('HeaderController', function ($routeParams, $rootScope, $scope, $location, $localStorage, PageLoader, $window) {
     $scope.isActive = function (viewLocation) { 
 
     	var path = $location.path();
@@ -35,8 +35,23 @@ angular.module('repertorioApp').controller('HeaderController', function ($rootSc
 
         PageLoader.getPage($rootScope.page_id, function(data) {
             $rootScope.pageData = data;
+			$window.location.reload();
         });
+        //$window.location.reload();
+        if($routeParams.id){
+            PageLoader.getPosts(function(data) {
+                data = JSON.stringify(data);
+                data = JSON.parse(data);
+                for (var i = data.length - 1; i >= 0; i--) {
+                    if(data[i].custom_fields.event_id[0].toString()==$routeParams.id.toString()){
+                        $rootScope.postData = data[i];
+                    }
+                };
+            });
+        }		
     }
+
+
 
 
 });

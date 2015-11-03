@@ -9,40 +9,43 @@
 */
 
 
-angular.module('repertorioApp').controller('EventCtrl', function ($http, $timeout, $rootScope, $scope, $routeParams, $location, $window, $filter, PatronData) {
+angular.module('repertorioApp').controller('EventCtrl', function (PageLoader, $http, $timeout, $rootScope, $scope, $routeParams, $location, $window, $filter, PatronData) {
 	$('#search-box').fadeOut();
 	//$rootScope.events = PatronData.init();
 	function buildCalendarDates(){
 		var theEvent = [];
 		theEvent = ($filter('filter')($rootScope.events, {id: $routeParams.id}));
-		console.log(theEvent[0]);
 		$scope.event = theEvent[0];
-		console.log($scope.event.id);
 		getCalendarDates($scope.event);
 	};
 
+	PageLoader.getPosts(function(data) {
+		data = JSON.stringify(data);
+	    data = JSON.parse(data);
+		
+		for (var i = data.length - 1; i >= 0; i--) {
+			console.log(data[i].custom_fields);
+			if(data[i].custom_fields.event_id[0]!==""){
+
+				if(data[i].custom_fields.event_id[0].toString()==$routeParams.id.toString()){
+					$rootScope.postData = data[i];
+					
+				}
+
+
+			}
+		};
+	});
+
 	
-
-
-		// $scope.$on('$viewContentLoaded', function(){
-	 //    	buildCalendarDates();
-	 //  	});
-  	// $scope.$on('$viewContentLoaded', function(event) {
-   //    $timeout(function() {
-   //      buildCalendarDates();
-   //    },0);
-   //  });
-    var url = 'data/PatronTicket__PublicApiEventList.json';
+    //var url = 'data/PatronTicket__PublicApiEventList.json';
+	var url = 'http://jsonp.afeld.me/?url=https://repertorio.secure.force.com/ticket/PatronTicket__PublicApiEventList';
     var result;
 	$http.get(url)
 	     .then(function(res){
-	         console.log('init');
 	         result = JSON.stringify(res);
 	         result = JSON.parse(result);
-	         console.log(res.data.events);
 	         $rootScope.events = res.data.events;
-	         console.log('init: '+$rootScope.events);
-	         //return res.data.events; 
 	         buildCalendarDates();     
 	      });
 
@@ -55,35 +58,30 @@ angular.module('repertorioApp').controller('EventCtrl', function ($http, $timeou
   	}
 
   	 function goToPurchase(id) {
-	    console.log(id);
 	    $location.path('purchase/'+id);
 	  };
 
 	function getCalendarDates(d){
-		console.log('getCalendarDates: '+d);
 		var today = new Date();
 		
 		console.log('d.instances.length equals: '+d.instances.length) //how many show times in the array?
 		for (var h = d.instances.length - 1; h >= 0; h--) { 
+			console.log('CAL: '+d.instances[h]);
 			var showdate = moment(new Date(d.instances[h].name));			
 			var newdate = new Date(showdate);
 			var time = showdate.format('hh:mmA');
-			console.log(newdate+' / '+today);
 
 			if(newdate>today){
 				var url = d.instances[h].purchaseUrl;
 				var id = url.substr(url.lastIndexOf('/') + 1);
 				id = url.substr(url.lastIndexOf('#') + 1);
-				console.log(id);
 				var purchaseUrl = '#/purchase/'+id;
 
 				$("#eventWidget").jqxCalendar('addSpecialDate', newdate, '', '<a href="'+purchaseUrl+'">'+d.name+'<br/>'+time+'</a>');
 				$("#eventWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
 			}
-			///console.log(x);
-			//$("#jqxWidget").jqxCalendar('specialDate');
+
 		}
-		//$('.jqx-tooltip').jqxTooltip({ showArrow: true, position: 'top' });
 	}
 
 
@@ -99,6 +97,10 @@ angular.module('repertorioApp').controller('EventCtrl', function ($http, $timeou
 		console.log(loc);
 		$location.path(loc);
 	};
+	$scope.getImage = function(img_id) {
+		var result = $filter('filter')($rootScope.postData.attachments, {id:img_id})[0];
+  		return result.url;
+  	};
 });
 
 

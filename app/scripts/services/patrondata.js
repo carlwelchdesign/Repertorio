@@ -8,52 +8,49 @@
  * Factory in the repertorioApp.
  */
 angular.module('repertorioApp')
-  .factory('PatronData', function ($http, $cacheFactory) {
+  .factory('PatronData', function ($http, $cacheFactory, $rootScope) {
     // Service logic
     // ...
 
     
-    var url = 'data/PatronTicket__PublicApiEventList.json';
+    //var url = 'data/PatronTicket__PublicApiEventList.json';
+	var url = 'http://jsonp.afeld.me/?url=https://repertorio.secure.force.com/ticket/PatronTicket__PublicApiEventList';
     var dataCache = $cacheFactory.get('dataCache');
     var result;
       return {
+
+          init : function(){
+            $http.get(url)
+                 .then(function(res){
+                     result = JSON.stringify(res);
+                     result = JSON.parse(result);
+                     $rootScope.events = res.data.events;
+                     return res.data.events;      
+                  });
+          },
           qdata : function(callback) {
               return result;
           },
           fetchData : function(callback) {
-              console.log('fecthData');
               result = $http.get(url).success(callback, {cache: dataCache});
               result = JSON.stringify(result);
               result = JSON.parse(result);
+              //console.log(result.events);
               return result.events;
           },
           getPatronJson: function(callback){
             var url = 'https://repertorio.secure.force.com/ticket/PatronTicket__PublicApiEventList?callback=JSON_CALLBACK';
-            // $http.jsonp(url);
-
-            // function JSON_CALLBACK(data) {
-            //       console.log(data.found);                  
-            //       result = JSON.stringify(data);
-            //       result = JSON.parse(result);
-            //       console.log('getPatronJson: '+result.events)
-            //       return result.events;
-            //   }
-
-            $http({method: 'JSONP', url: url}).
-                    success(function(data, status) {
-                      // $scope.status = status;
-                      // $scope.data = data;
-                      console.log(status);
-                    }).
-                    error(function(data, status) {
-                      // $scope.data = data || "Request failed";
-                      // $scope.status = status;
-                      console.log(status);
-                  });
+            $http.jsonp(url).then(function(data) {
+              data = JSON.stringify(data);
+              data = JSON.parse(data);
+              return data.events;
+            });
 
 
-         
-          
+            function jsonp_callback(data) {
+                // returning from async callbacks is (generally) meaningless
+                console.log(data.found);
+            }
 
           }
       };

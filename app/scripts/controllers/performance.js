@@ -9,8 +9,8 @@
 */
 
 
-angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, $rootScope, $scope, $routeParams, $location, $window, $filter) {
-
+angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, $rootScope, $scope, $routeParams, $location, $window, $filter, PageLoader) {
+  
   // pull the json from WordPress
   $rootScope.page_id = 299;
   PageLoader.getPage($rootScope.page_id, function(data) {
@@ -22,19 +22,15 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
     extractDates($rootScope.events);
   };
 
-  //buildCalendarDates();
 
-    var url = 'data/PatronTicket__PublicApiEventList.json';
+    //var url = 'data/PatronTicket__PublicApiEventList.json';
+	var url = 'http://jsonp.afeld.me/?url=https://repertorio.secure.force.com/ticket/PatronTicket__PublicApiEventList';
     var result;
     $http.get(url)
          .then(function(res){
-             console.log('init');
              result = JSON.stringify(res);
              result = JSON.parse(result);
-             console.log(res.data.events);
              $rootScope.events = res.data.events;
-             console.log('init: '+$rootScope.events);
-             //return res.data.events; 
              buildCalendarDates();     
           });
 
@@ -42,8 +38,7 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
   function extractDates(d){
     
     var today = new Date();
-    //today = moment(today).format('MM/DD/YY')+' 1:00AM';
-	today = moment(today).format('YY/MM/DD')+' 1:00AM';
+    today = moment(today).format('YY/MM/DD')+' 1:00AM';
 
     var showDates = [];
     var i = d.length;
@@ -56,14 +51,13 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
         for ( var h in thisEvent.instances) {
           var thisInstance = thisEvent.instances[h]
           var showdate = moment(new Date(thisInstance.name));
-		  //var shortDate = showdate.format('MM/DD/YY') + " " + showdate.format('h:mmA');
           var shortDate = showdate.format('YY/MM/DD') + " " + showdate.format('h:mmA');
-		  var displayDate = showdate.format('MM/DD/YY') + " " + showdate.format('h:mmA');
+		      var displayDate = showdate.format('MM/DD/YY') + " " + showdate.format('h:mmA');
           if(shortDate>today){
             var obj = { 
               name: eventname,
               displayDate: displayDate,
-			  shortDate: shortDate,
+			        shortDate: shortDate,
               longDate: showdate,
               purchaseUrl: thisInstance.purchaseUrl
             };
@@ -81,13 +75,12 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
           }
         }
       }
-      $("#jqxWidget").jqxCalendar({ enableTooltips: true});
+      
 
     }
     $("#jqxWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
-
+    $("#jqxWidget").jqxCalendar({ enableTooltips: true});
     $scope.showDates = showDates;
-    //$('.jqx-tooltip').jqxTooltip({ showArrow: true, position: 'top' });
 
   }
 
@@ -126,6 +119,11 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
     console.log(loc);
     $location.path(loc);
   };
+  
+  $scope.getImage = function(img_id) {
+		var result = $filter('filter')($rootScope.pageData.attachments, {id:img_id})[0];
+  		return result.url;
+  	}
 
   console.log('lang: '+$rootScope.lang);
 
