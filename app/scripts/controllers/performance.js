@@ -42,7 +42,7 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
 
     var showDates = [];
     var i = d.length;
-
+    var showList = [];
     for ( var i in d) {
       var thisEvent = d[i];
       var eventname = thisEvent.name;
@@ -71,15 +71,26 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
             id = url.substr(url.lastIndexOf('#') + 1);
             var purchaseUrl = '#/purchase/'+id;
 
-            $("#jqxWidget").jqxCalendar('addSpecialDate', newdate, '', '<a href="'+purchaseUrl+'">'+eventname+'<br/>'+time+'</a>');
+            //$("#jqxWidget").jqxCalendar('addSpecialDate', newdate, '', '<a href="'+purchaseUrl+'">'+eventname+'<br/>'+time+'</a>');
+            showList.push({
+              title: eventname+'<br/>'+time,
+              start:newdate,
+              url:purchaseUrl,
+              backgroundColor:'#870808',
+              textColor: 'white',
+              borderColor:'white'
+            });
           }
         }
       }
       
 
     }
-    $("#jqxWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
-    $("#jqxWidget").jqxCalendar({ enableTooltips: true});
+    // $("#jqxWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
+    // $("#jqxWidget").jqxCalendar({ enableTooltips: true});
+    $('#calendar').fullCalendar({
+        events : showList
+      });
     $scope.showDates = showDates;
 
   }

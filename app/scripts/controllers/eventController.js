@@ -63,7 +63,7 @@ angular.module('repertorioApp').controller('EventCtrl', function (PageLoader, $h
 
 	function getCalendarDates(d){
 		var today = new Date();
-		
+		var showList = [];
 		console.log('d.instances.length equals: '+d.instances.length) //how many show times in the array?
 		for (var h = d.instances.length - 1; h >= 0; h--) { 
 			console.log('CAL: '+d.instances[h]);
@@ -77,11 +77,24 @@ angular.module('repertorioApp').controller('EventCtrl', function (PageLoader, $h
 				id = url.substr(url.lastIndexOf('#') + 1);
 				var purchaseUrl = '#/purchase/'+id;
 
-				$("#eventWidget").jqxCalendar('addSpecialDate', newdate, '', '<a href="'+purchaseUrl+'">'+d.name+'<br/>'+time+'</a>');
-				$("#eventWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
+				//$("#eventWidget").jqxCalendar('addSpecialDate', newdate, '', '<a href="'+purchaseUrl+'">'+d.name+'<br/>'+time+'</a>');
+				//$("#eventWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
+				showList.push({
+					title: d.name+'<br/>'+time,
+					start:newdate,
+					url:purchaseUrl,
+              		backgroundColor:'#870808',
+              		textColor: 'white',
+              		borderColor:'white'
+				});
+
 			}
 
 		}
+		$('#calendar').fullCalendar({
+    		events : showList
+    	});
+
 	}
 
 
