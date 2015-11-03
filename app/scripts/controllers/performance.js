@@ -73,7 +73,7 @@ angular.module('repertorioApp').controller('PerformancesCtrl', function ($http, 
 
             //$("#jqxWidget").jqxCalendar('addSpecialDate', newdate, '', '<a href="'+purchaseUrl+'">'+eventname+'<br/>'+time+'</a>');
             showList.push({
-              title: eventname+'<br/>'+time,
+              title: eventname,
               start:newdate,
               url:purchaseUrl,
               backgroundColor:'#870808',

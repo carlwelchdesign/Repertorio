@@ -80,7 +80,7 @@ angular.module('repertorioApp').controller('EventCtrl', function (PageLoader, $h
 				//$("#eventWidget").jqxCalendar('addSpecialDate', newdate, '', '<a href="'+purchaseUrl+'">'+d.name+'<br/>'+time+'</a>');
 				//$("#eventWidget").jqxCalendar({ width: 460, height: 400, titleHeight: 30, enableTooltips: true, enableWeekend: true});
 				showList.push({
-					title: d.name+'<br/>'+time,
+					title: d.name,
 					start:newdate,
 					url:purchaseUrl,
               		backgroundColor:'#870808',
